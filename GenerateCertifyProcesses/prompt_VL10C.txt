@@ -1,0 +1,558 @@
+
+
+            You are expert in generating Worksoft Certify test automation. You can convert descriptions of manual tests or operation into certify test automation in the form of structured JSON output as below :
+            The automation is created screen by screen, for each screen, the steps are specified as step sequence("Step"), Object Name ("Object), Action and Action Description. 
+            Please ensure that object must exist on the screen. For reference list of objects per screen is also provided. 
+            Please create appropriate step for navigation when you transition from one screen to another screen by pressing enter or clicking appropriate tab.
+            Only provide json and nothing else. reference JSON Format:
+
+            [ 
+                {
+                    "name": "Sales Document Creation",
+                    "Application": "S4 Hana Sales and Distribution",
+                
+                            "steps": [
+                                {
+                                    "Step": 1,
+                                    "Object": "GuiOkCodeField.wnd[0]/tbar[0]/okcd",
+                                    "ObjectName": "okcd",
+                                    "Action": "Enter transaction code",
+                                    "ActionDescription": "Enter the transaction code 'VA01' in the OK code field",
+                        "Screen": "SAP Main",
+                                "Screen Name": "SAP Main"
+                                }
+                ,        
+                    
+                                {
+                                    "Step": 2,
+                                    "Object": "GuiCTextField.VBAK-AUART",
+                                    "ObjectName": "Order Type",
+                                    "Action": "Enter content into an EditBox",
+                                    "ActionDescription": "Enter the order type",
+                                "Screen": "SAPMV45A:0101",
+                                "Screen Name": "Create Sales Order"
+                                },
+                                {
+                                    "Step": 3,
+                                    "Object": "GuiButton.btn[0]",
+                                    "ObjectName": "Press Enter",
+                                    "Action": "Press Button",
+                                    "ActionDescription": "Press Enter to proceed",
+                                "Screen": "SAPMV45A:0101",
+                                "Screen Name": "Create Sales Order"
+                    
+                        },    
+
+                                {
+                                    "Step": 4,
+                                    "Object": "GuiCTextField.KUAGV-KUNNR",
+                                    "ObjectName": "Sold to party",
+                                    "Action": "Enter text",
+                                    "ActionDescription": "Enter the sold to party",
+                                "Screen": "SAPMV45A:4701",
+                                "Screen Name": "Sales Order Items"
+                                },
+                                {
+                                    "Step": 5,
+                                    "Object": "GuiCTextField.KUWEV-KUNNR",
+                                    "ObjectName": "Ship to party",
+                                    "Action": "Enter text",
+                                    "ActionDescription": "Enter the ship to party",
+                                "Screen": "SAPMV45A:4701",
+                                "Screen Name": "Sales Order Items"
+                                },
+                                {
+                                    "Step": 6,
+                                    "Object": "GuiButton.btn[0]",
+                                    "ObjectName": "Press Enter",
+                                    "Action": "Press Button",
+                                    "ActionDescription": "Press Enter to proceed",
+                                "Screen": "SAPMV45A:4701",
+                                "Screen Name": "Sales Order Items"
+                                }                            
+
+            ]
+            }
+            ]
+            SAP Fields and their SAP Screen Names should be as per screen object maping provided.
+
+            
+SAP Object and Screen mapping  is as follows: [
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.BT_SUCH",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "BT_SUCH"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-VBELN",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-VBELN"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[13]",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "btn[13]"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-WAERK",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-WAERK"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-ZTERM",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-ZTERM"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-INCO1",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-INCO1"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[0]",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "btn[0]"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-AUART",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-AUART"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.LIKP-WSTATUS",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "LIKP-WSTATUS"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-VBELN",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-VBELN"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.LIKP-VBELN",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "LIKP-VBELN"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-KNZZE",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-KNZZE"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-KBETR",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-KBETR"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-AUART",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-AUART"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-KUNNR",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-KUNNR"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-MATNR",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-MATNR"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-VKORG",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-VKORG"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-VTWEG",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-VTWEG"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VL03N-STATUS",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VL03N-STATUS"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.SomeField",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "SomeField"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-STATUS",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "VBAK-STATUS"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[1]",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "btn[1]"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.KONV-KBETR",
+        "Screen": "SAPMV45A:0102",
+        "Field_Name": "KONV-KBETR"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[8]",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "btn[8]"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-VKGRP",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-VKGRP"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-VKBUR(1)",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-VKBUR(1)"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-AUARTq",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-AUARTq"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-SPART(1)",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-SPART(1)"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-AUART",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-AUART"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-VKORG",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-VKORG"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-VTWEG",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-VTWEG"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-SPART",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-SPART"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-VKBUR",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-VKBUR"
+    },
+    {
+        "Component": "GuiLabel",
+        "Object Name": "GuiLabel.VBAK-VKORG",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-VKORG"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.TVAKT-BEZEI",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "TVAKT-BEZEI"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[0]",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "btn[0]"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-BZIRK",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-BZIRK"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-VBELN",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-VBELN"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-EBELN",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-EBELN"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBUP-VBELN",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBUP-VBELN"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LIKP-DATLT",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "LIKP-DATLT"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-VBELN",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-VBELN"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-AUART",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-AUART"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-KUNNR",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-KUNNR"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-MATNR",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-MATNR"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-VKORG",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-VKORG"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-VTWEG",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-VTWEG"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.LIKP-VBELN",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "LIKP-VBELN"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.LIKP-VTWEG",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "LIKP-VTWEG"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.LIKP-SPART",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "LIKP-SPART"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.LIKP-BEDAT",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "LIKP-BEDAT"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[1]",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "btn[1]"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[2]",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "btn[2]"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.KNA1-KUNNR",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "KNA1-KUNNR"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.MARA-MATNR",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "MARA-MATNR"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBFA-VBELN",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBFA-VBELN"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBFA-WERKS",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBFA-WERKS"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-BLDAT",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-BLDAT"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBFA-BELNR",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBFA-BELNR"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[3]",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "btn[3]"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[4]",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "btn[4]"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[5]",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "btn[5]"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[6]",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "btn[6]"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-MATERIAL",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAK-MATERIAL"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VL06O-VKAUS",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VL06O-VKAUS"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VL06O-VTWEG",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VL06O-VTWEG"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VL06O-BUDAT",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VL06O-BUDAT"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VL03N-VBELN",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VL03N-VBELN"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAP-MATNR",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "VBAP-MATNR"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.LIKP-BUDAT",
+        "Screen": "SAPMV45A:0101",
+        "Field_Name": "LIKP-BUDAT"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-VBELN",
+        "Screen": "SAPMV45A:0103",
+        "Field_Name": "VBAK-VBELN"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[0]",
+        "Screen": "SAPMV45A:0103",
+        "Field_Name": "btn[0]"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.PrintPDF",
+        "Screen": "SAPMV45A:0103",
+        "Field_Name": "PrintPDF"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.AttachRun",
+        "Screen": "SAPMV45A:0103",
+        "Field_Name": "AttachRun"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[1]",
+        "Screen": "SAPMV45A:0103",
+        "Field_Name": "btn[1]"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[2]",
+        "Screen": "SAPMV45A:0103",
+        "Field_Name": "btn[2]"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.Save",
+        "Screen": "SAPMV45A:0104",
+        "Field_Name": "Save"
+    }
+]
+Strictly follow Screen corresponding to the object when you are generate step. Please think step by step and only add step when corresponding object belong to the screen as per mapping json
+
+    
+    Important Instructions:
+- First Step should be entering SAP TCode, for eg. ("VA01") in ok code field on SAP Main Screen
+- Find SAP Program name for the SAP TCode, for e.g. VA01 program name is SAPMV45A and first screen is SAPMV45A:0101
+- Then get the objects on SAPMV45A:0101 screen from screen mapping provided and add them in JSON
+- Then move on to next screen and add objects for next screen in JSON. Before moving to next screen, add navigation step by pressing enter or click on a tab
+- Make sure to add objects specified in description and on screen they exist as per the mapping 
+    
+    Requirement for Certify Automation: 
+    SAP TCode: VL10C and Step Description: Create Delivery
+1.Enter Sales order and empty Delivery creation dates.
+2.Click Log button.
+3.Click on the table displayed.
