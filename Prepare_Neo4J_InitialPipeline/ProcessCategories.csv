@@ -1,0 +1,6 @@
+n
+"(:ProcessCategories {name: Business Areas, rowId: 0})"
+"(:ProcessCategories {name: E2E Processes, rowId: 1})"
+"(:ProcessCategories {name: Applications, rowId: 2})"
+"(:ProcessCategories {name: Interface Technology, rowId: 3})"
+"(:ProcessCategories {name: Project, rowId: 4})"
