@@ -1,0 +1,17 @@
+SAP Main: 
+1. SAPMV45A:0101:
+GuiCTextField.VBAK-AUART - Order Type,
+GuiCTextField.VBAK-VKORG - Sales Organization,
+GuiCTextField.VBAK-VTWEG - Distribution Channel
+GuiCTextField.VBAK-SPART - Division
+
+2. SAPMV45A:4001
+GuiCTextField.KUAGV-KUNNR - Sold To Party
+GuiCTextField.KUWEV-KUNNR - Ship To Party
+
+3. SAPMV45A:4021 (FAIL)
+GuiTextField.VBKD-BSTKD - Customer Reference
+
+4. SAPMV45A:4900 (FAIL)
+GuiCTextField.RV45A-MABNR - Material
+GuiTextField.RV45A-KWMENG - Quantity (FAIL)
