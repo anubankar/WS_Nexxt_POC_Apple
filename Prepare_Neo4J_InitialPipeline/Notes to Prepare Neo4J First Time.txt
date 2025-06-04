@@ -1,0 +1,126 @@
+=> Preparing new aura instance - anu gmail account
+#Change Neo4j Connection in env file
+
+#1. Run below to load basic tables
+Upload_Base_Tables.py
+
+2. Download TestStep File
+Python File => "Download TestStep File.py"
+Import download CSV in Neo4j
+
+Note: This is needed as TestStep is not uploading in Aura Instance
+
+Upload TestStep File in Aura. 
+Directory: D:\NexxtGenAI_VsCode_WS\Worksoft\TCode_SubProcess_Extraction_Logic
+File Format: TestStep_with_ProcessID_and_TCodes_*.csv
+File => TestStep_with_ProcessID_and_TCodes_20250422_150015.xlsx
+
+Use below query(local instance):
+
+// Create a unique constraint on TestStepID (if not already exists)
+CREATE CONSTRAINT `TestStepID_Steps_uniq` IF NOT EXISTS
+FOR (n:Steps)
+REQUIRE n.TestStepID IS UNIQUE;
+
+// Define parameters
+:param idsToSkip => [];
+
+// Import and merge data from CSV
+LOAD CSV WITH HEADERS FROM "file:///TestStep_with_ProcessID_and_TCodes_20250423_150058.csv" AS row
+WITH row
+WHERE NOT row.TestStepID IN $idsToSkip 
+  AND row.TestStepID IS NOT NULL 
+  AND trim(row.TestStepID) <> ""
+
+MERGE (s:Steps { TestStepID: toInteger(row.TestStepID) })
+SET 
+  s.ProcessID = toInteger(row.ProcessID),
+  s.Narrative = row.Narrative,
+  s.ComponentActionID = toInteger(row.ComponentActionID),
+  s.ApplicationVersionID = toInteger(row.ApplicationVersionID),
+  s.InterfaceLibraryID = toInteger(row.InterfaceLibraryID),
+  s.ObjectID = toInteger(row.ObjectID),
+  s.CertifySequence = toInteger(row.CertifySequence),
+  s.Skip = toBoolean(row.Skip),
+  s.TCode = row.TCode,
+  s.ExecProcessID = toInteger(row.ExecProcessID),
+  s.SubProcess = row.SubProcess;
+
+----------------------------------------------------------------
+
+3. Create Relationship Between Process and Steps node
+Prepare Relationship.py
+
+Query: 
+MATCH (n:Process), (s:Steps)
+WHERE n.ProcessID = s.ProcessID
+MERGE (n)-[:PROCESS_STEPS]->(s)
+
+----------------------------------------------------------------------
+4. Prepare E2EProcess
+Upload File e2e_Import_In_Neo4J_Modified.csv
+***PENDING => Modify python program. Prepare a master list of TCode and E2E Process and Business Area
+Then use it to fill E2EProcess node to reduce api calls
+
+5. Get ProcessCategories Node Label
+CREATE (:ProcessCategories {name: 'Business Areas'}),
+       (:ProcessCategories {name: 'E2E Processes'}),
+       (:ProcessCategories {name: 'Applications'}),
+       (:ProcessCategories {name: 'Interface Technology'}),
+       (:ProcessCategories {name: 'Project'});
+MATCH (p:ProcessCategories) RETURN p;       
+
+Note: These are static values required for les miserable chart
+
+6. Create TCode Variants
+create_tcode_variants_to_neo4j.py
+This code is for filling 2 Node Labels:
+Unique_TCode_Var
+TCode_var
+
+7. Create Process Variants
+Python => create_process_variants_to_neo4j.py
+This code is for filling 2 Node Labels:
+Process_TCode_Variants_All
+Process_Unique_TCode_Variants
+
+8. Create Vector Index on Process Node Label
+
+8.1. Create Step property on Process Node Label
+MATCH (p:Process)-[:PROCESS_STEPS]->(s:Steps)  
+WITH p, s
+ORDER BY p, s.CertifySequence  // Ensures ordering within each process
+WITH p, COLLECT({CertifySequence: s.CertifySequence, Screen: s.ObjectParentPhysicalName, Object: s.ObjectPhysicalName, Narrative: s.Narrative}) AS stepNarratives
+SET p.Step = apoc.convert.toJson(stepNarratives)
+RETURN p
+
+8.2 Create Process_Detail Property on Process Node Label
+MATCH (p:Process)
+SET p.Process_Details =
+    "Process Name: " + p.Name + ", Description :" + p.Description + 
+    ", Narratives:" + p.Step
+
+9. Create Property on Unique_TCode_Var
+MATCH (u:Unique_TCode_Var), (p:Process)
+WHERE u.ProcessID = p.ProcessID
+SET u.Tcode_Steps = p.Process_Details
+
+10. Create Relationship TCODE_STEPS between Unique_TCode_Var and Steps
+query on auradb:
+MATCH(a: Unique_TCode_Var), (b: Steps)
+where a.ProcessID = b.ProcessID
+CREATE (a) - [:TCODE_STEPS] -> (b)
+
+11. Run Python Script to create Vector Index
+Create_Vector_Indexes.py
+1. Create "Process_Details_Index" Index
+2. Create "TCode_Variant_Tcode_Steps_Index" Index
+
+12. Update last uploaded data node 
+MERGE (d:DataUpload {LastDataPulledData: " "})
+
+13. To create Test_cases Node
+Run Batch_Preprocessing/batch_preprocessing.py 
+
+14. Create vector index on Test_cases node 
+Run Batch_Preprocessing/vector_embedding.py
