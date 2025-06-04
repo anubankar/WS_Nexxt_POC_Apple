@@ -1,0 +1,54 @@
+# Neo4j Incremental Pipeline Documentation
+
+## Overview
+This pipeline handles incremental updates to the Neo4j database, processing and transforming data from SQL Server to Neo4j format while maintaining relationships and variants.
+
+## Pipeline Components
+
+### 1. Base Table Upload (Upload_Base_Table_Incremented.py)
+- Handles incremental loading of base tables from SQL Server to Neo4j
+- Processes tables: Application, ApplicationVersion, Component, ComponentAction, ComponentActionParms, InterfaceLibrary, Object, Process, TestStep
+- Includes TCode mapping and extraction functionality
+- Maintains data consistency with "last pull date" tracking
+- Excludes non-standard TCodes
+
+### 2. Process Variants Creation (Create_process_variants_to_neo4j_Incremented.py)
+- Creates and manages process variants in Neo4j
+- Generates two main node types:
+  - Process_TCode_Variants_All: Contains all process variants
+  - Process_Unique_TCode_Variants: Contains only unique, non-subset variants
+- Handles variant ID assignment and relationship management
+
+### 3. TCode Variants Processing (create_tcode_variants_to_neo4j_Incremented.py)
+- Processes and creates TCode variants in Neo4j
+- Manages relationships between processes and their TCode variants
+- Handles variant identification and categorization
+
+------------------------------------------------------------------------------------------------------------
+
+## Execution Order
+1. Run Upload_Base_Table_Incremented.py to load base tables
+2. Execute create_tcode_variants_to_neo4j_Incremented.py for TCode processing
+3. Run Create_process_variants_to_neo4j_Incremented.py for variant creation
+4. Finally, execute PrepareRelationships_Incremented.py to establish relationships
+
+## Important Notes
+- The pipeline uses environment variables for database connections
+- Maintains data consistency through incremental updates
+- Handles session management and reconnection for Neo4j
+- Includes error handling and logging
+- Supports bulk operations for better performance
+
+## Dependencies
+- neo4j-driver
+- pymssql
+- pandas
+- python-dotenv
+- Environment variables for database connections
+
+## Quick Start
+To begin the pipeline execution, run:
+```
+python Upload_Base_Tables_Incremented.py
+```
+
