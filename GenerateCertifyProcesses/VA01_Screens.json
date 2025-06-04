@@ -1,0 +1,56 @@
+[
+ {
+   "Component": "GuiCTextField",
+   "Object Name": "GuiCTextField.VBAK-AUART",
+   "Screen": "SAPMV45A:0101",
+   "Field_Name": "Order Type"
+ },
+ {
+   "Component": "GuiCTextField",
+   "Object Name": "GuiCTextField.VBAK-VKORG",
+   "Screen": "SAPMV45A:0101",
+   "Field_Name": "Sales Organization"
+ },
+ {
+   "Component": "GuiCTextField",
+   "Object Name": "GuiCTextField.VBAK-VTWEG",
+   "Screen": "SAPMV45A:0101",
+   "Field_Name": "Distribution Channel"
+ },
+ {
+   "Component": "GuiCTextField",
+   "Object Name": "GuiCTextField.VBAK-SPART",
+   "Screen": "SAPMV45A:0101",
+   "Field_Name": "Div"
+ },
+ {
+   "Component": "GuiCTextField",
+   "Object Name": "GuiCTextField.KUAGV-KUNNR",
+   "Screen": "SAPMV45A:4701",
+   "Field_Name": "Sold-To Party"
+ },
+ {
+   "Component": "GuiCTextField",
+   "Object Name": "GuiCTextField.KUWEV-KUNNR",
+   "Screen": "SAPMV45A:4701",
+   "Field_Name": "Ship-To Party"
+ },
+ {
+   "Component": "GuiCTextField",
+   "Object Name": "GuiTextField.VBKD-BSTKD",
+   "Screen": " SAPMV45A:4021",
+   "Field_Name": " Cust. Reference"
+ },
+ {
+   "Component": "GuiCTextField",
+   "Object Name": "GuiCTextField.RV45A-MABNR",
+   "Screen": "SAPMV45A:4900",
+   "Field_Name": "Material"
+ },
+ {
+   "Component": "GuiCTextField",
+   "Object Name": "GuiTextField.RV45A-KWMENG",
+   "Screen": "SAPMV45A:4900",
+   "Field_Name": "Quantity"
+ }
+]

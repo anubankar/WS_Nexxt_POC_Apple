@@ -1,0 +1,140 @@
+[
+    {
+        "name": "Sales Document Creation",
+        "Application": "S4 Hana Sales and Distribution",
+        "Windows": [
+            {
+                "Screen": "SAP Main",
+                "Window Name": "SAP Main",
+                "screen number": "1",
+                "steps": [
+                    {
+                        "Step": 1,
+                        "Object": "GuiOkCodeField.wnd[0]/tbar[0]/okcd",
+                        "ObjectName": "Enter TCode into OK Code field",
+                        "Action": "Input TCode in GuiOkCode Field",
+                        "ActionDescription": "Input TCode in GuiOkCode Field"
+                    }
+                ]
+            },
+            {
+                "Screen": "SAPMV45A:0101",
+                "Window Name": "Create Sales Order",
+                "screen number": "2",
+                "steps": [
+                    {
+                        "Step": 1,
+                        "Object": "GuiCTextField.VBAK-AUART",
+                        "ObjectName": "Order Type",
+                        "Action": "Enter text",
+                        "ActionDescription": "Enter the order type"
+                    },
+                    {
+                        "Step": 2,
+                        "Object": "GuiCTextField.VBAK-VKORG",
+                        "ObjectName": "Sales Organization",
+                        "Action": "Enter text",
+                        "ActionDescription": "Enter the sales organization"
+                    },
+                    {
+                        "Step": 3,
+                        "Object": "GuiCTextField.VBAK-VTWEG",
+                        "ObjectName": "Distribution Channel",
+                        "Action": "Enter text",
+                        "ActionDescription": "Enter the distribution channel"
+                    },
+                    {
+                        "Step": 4,
+                        "Object": "GuiCTextField.VBAK-SPART",
+                        "ObjectName": "Division",
+                        "Action": "Enter text",
+                        "ActionDescription": "Enter the division"
+                    },
+                    {
+                        "Step": 5,
+                        "Object": "GuiButton.btn[0]",
+                        "ObjectName": "Press Enter",
+                        "Action": "Press Button",
+                        "ActionDescription": "Press Enter to proceed"
+                    }
+                ]
+            },
+            {
+                "Screen": "SAPMV45A:4701",
+                "Window Name": "Sales Order Items",
+                "screen number": "3",
+                "steps": [
+                    {
+                        "Step": 1,
+                        "Object": "GuiCTextField.KUAGV-KUNNR",
+                        "ObjectName": "Sold to party",
+                        "Action": "Enter text",
+                        "ActionDescription": "Enter the sold to party"
+                    },
+                    {
+                        "Step": 2,
+                        "Object": "GuiCTextField.KUWEV-KUNNR",
+                        "ObjectName": "Ship to party",
+                        "Action": "Enter text",
+                        "ActionDescription": "Enter the ship to party"
+                    }
+				]
+			},
+			{   "Screen": "SAPMV45A:4201",
+                "Window Name": "Sales Order Items",
+                "screen number": "4",
+                "steps": [			
+                    {
+                        "Step": 1,
+                        "Object": "GuiCTextField.VBKD-BSTKD",
+                        "ObjectName": "Customer Reference",
+                        "Action": "Enter text",
+                        "ActionDescription": "Enter the customer reference"
+                    }
+				]
+			},
+			{
+				"Screen": "SAPMV45A:4900",
+                "Window Name": "Item Overview",
+                "screen number": "5",
+                "steps": [	
+                    {
+                        "Step": 1,
+                        "Object": "GuiCTextField.RV45A-MABNR",
+                        "ObjectName": "Material",
+                        "Action": "Enter text",
+                        "ActionDescription": "Enter the material"
+                    },
+                    {
+                        "Step": 2,
+                        "Object": "GuiCTextField.RV45A-MABNR",
+                        "ObjectName": "Quantity",
+                        "Action": "Enter text",
+                        "ActionDescription": "Enter the quantity"
+                    }
+				]
+			},
+			{
+				"Screen": "SAPMV45A:4001",
+                "Window Name": "Continue",
+                "screen number": "6",
+                "steps": [	
+                    {
+                        "Step": 1,
+                        "Object": "GuiButton.btn[0]",
+                        "ObjectName": "Press Enter",
+                        "Action": "Press Button",
+                        "ActionDescription": "Press Enter to proceed after confirmation"
+                    },
+                    {
+                        "Step": 2,
+                        "Object": "GuiButton.btn[11]",
+                        "ObjectName": "Save Document",
+                        "Action": "Press Button",
+                        "ActionDescription": "Choose Save Document. Make a note of the sales order number"
+                    }
+                ]
+            }
+        ]
+    }
+]
