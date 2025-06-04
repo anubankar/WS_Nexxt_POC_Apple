@@ -1,0 +1,61 @@
+=> Batch Mode Processing
+Imagine 200 documents batch
+
+PRE-PROCESSING:
+1. Read all the documents
+2. Extract Sections and bifurcate by Tcode and description. 
+	Note: 
+	a. For signavio, all the steps will be description
+	b. For Fiori, Tcode is App Number
+	c. DOCUMENT CAN BE IN DIFFERENT FORMAT. So we might have to use LLM to extract relevant sections
+	d. For Signavio, Procedure Section Table Headings are same so its easy to extract Signavio Documents
+
+	For e.g
+	1st Document => VA01 - Create Sales Order
+	2nd Document => VA01 - Go to VA01, then enter Order Type, Ship to Party, Sold to Party
+					VA02 - xxxxx
+	3rd Document => VA01 - Create
+
+	Load all these combinations to Neo4J Or Sql Db
+
+	LOGIC:
+	- Read Sub Folder Files one by one
+	- Check file format excel or docx
+	- If Docx then check if Section Procedure with table headings as signavio exists or not
+      expected_headers = ['Test Step #', 'Test Step Name', 'Instruction', 'Expected Result', 'Pass/Fail/Comments']
+	  If its signavio document then use TransAlta code to extract sections / tables.
+	  Refer CreateSteps_andActions_New.py line no 333
+	- If it is excel document, then read rows. if every row has different TCode then save them as separate section. For e.g.
+	  Apple excel document has 22 sections
+	- Store this information into Neo4j.
+		Document Name, TCode, Description
+
+3. Find Unique Variants based on TCode and Description
+For e.g.
+Out of 200 documents: 
+VA01 => Total Variants => 50
+		Unique Variants => 5
+		
+4. Now collect all these unique Variants, create a excel from it in the format of Standard Export Sales Order Flow_AllRows.xlsx.
+Use it in human in the loop. This will create Processes for all unique variants
+
+5. Now when we batch process, we will already have Reference Processes ready
+So accuracy will improve as Step generation is not needed for most of the scenarios
+
+6. Create a simple excel report, showing:
+Total Documents,
+Total Sections per TCode / Fiori App Number,
+Unique Variants per TCode / Fiori App Number,
+ProcessID applicable per Variant
+
+Total Documents		TCode	Variant_ID 	Unique_Variant_Or_Not	ProcessID
+200		
+
+*ProcessID can be filled even if its not unique, based on ProcessID for Unique Variant
+
+7. Neo4J should get updated after Certify is batch loaded OR user changes any Processes directly in Certify
+
+Open Question: 
+1. Will the variant have impact based on the context of the document? for e.g. 2 documents has same line Create Sales Order but the expected steps in them are different and are based on document context. Decide how we will handle this?
+2. Create new ProcessID always or reuse existing if found. (this will be decided as per client need)
+3. DOCUMENT CAN BE IN DIFFERENT FORMAT. So to handle it on UI, we can have a API that returns TCode, and Description to UI
