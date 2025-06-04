@@ -1,0 +1,465 @@
+ProcessID,Name,End-to-End Business Process,Business Area
+12685,"BI/BW Demo process RSA1, Excel, ERP",BI/BW Demo,IT Operations
+72825,AS01 - Create Asset,Asset Lifecycle Management,Asset Management
+72826,ABB1 - Correction of Asset Account,Asset Lifecycle Management,Asset Management
+72828,AS02 - Change Asset,Asset Lifecycle Management,Asset Management
+84237,MasterAM,Asset Lifecycle Management,Asset Management
+10484,Revenue By Country - Validate three BW Interfaces - VPN REQUIRED,Revenue Reporting,Finance
+14736,FICO - Create Vendor Invoice,Vendor Invoice Processing,Finance
+45602,CreateG/LAccount,Finance Process,Finance
+46722,.FS00_Create_G/L_Account,Finance Process,Finance
+81426,.FICO SAP Park-Fiori Post,Finance Process,Finance
+85752,CreateGLAccount,Finance Process,Finance
+10884,SAP - FICO - Add/Reverse GL Transaction,Record to Report (RTR),Finance
+13331,E2E-NormalizedModel,Record to Report (RTR),Finance
+13333,E2E-DeNormalizedModel,Record to Report (RTR),Finance
+13336,E2E-DeNormalizedModel - LargeLoopExample,Record to Report (RTR),Finance
+13933,Integrated Test,Record to Report (RTR),Finance
+14816,E2E_Verify Menu Options with Data,Record to Report (RTR),Finance
+24108,FICO_CreateInvoice - 1809,Record to Report (RTR),Finance
+24542,SAPExcel_FindExcelRowAndPasteSAPScreenshots,Record to Report (RTR),Finance
+30698,SAP FICO Create Invoice,Record to Report (RTR),Finance
+10884,SAP - FICO - Add/Reverse GL Transaction,Record to Report (RTR),Finance
+13331,E2E-NormalizedModel,Record to Report (RTR),Finance
+13333,E2E-DeNormalizedModel,Record to Report (RTR),Finance
+13336,E2E-DeNormalizedModel - LargeLoopExample,Record to Report (RTR),Finance
+13933,Integrated Test,Record to Report (RTR),Finance
+14816,E2E_Verify Menu Options with Data,Record to Report (RTR),Finance
+24108,FICO_CreateInvoice - 1809,Record to Report (RTR),Finance
+24542,SAPExcel_FindExcelRowAndPasteSAPScreenshots,Record to Report (RTR),Finance
+30698,SAP FICO Create Invoice,Record to Report (RTR),Finance
+46721,FB50 Post GL Document,Record to Report (RTR),Finance
+46728,Asset Creation,Record to Report (RTR),Finance
+55250,Header Data Validation,Record to Report (RTR),Finance
+61742,Header Data Validation,Record to Report (RTR),Finance
+61747,File Move and SE16 Automation,Record to Report (RTR),Finance
+81323,Journal Entry Posting SAP - Sales Order Creation in Fiori,Order to Cash,Finance
+81333,FB50 - VA01 process,Finance Process,Finance
+81344,GL Posting and Sales Order Creation,Finance Process,Finance
+81407,Post GL Document - FB50,Finance Process,Finance
+82770,GL Document Create and Verify,Finance Process,Finance
+82779,P - FB03 Data Driven,Finance Process,Finance
+83798,Master FB60,Vendor Invoice Processing,Finance
+85751,FICO_CreateInvoice - 1809,Finance Process,Finance
+10638,SAP Hire to Pay - Shorter,Hiring Process,Human Resources
+12990,Hire to Pay - Long Process,Hiring Process,Human Resources
+14626,Hire to Pay - Not update for 1809,Hiring Process,Human Resources
+24404,E2E_Hiring,Hiring Process,Human Resources
+24837,HireEmployee_CrossPlatform,Hiring Process,Human Resources
+25036,HireEmployee_CrossPlatform(draft),Hiring Process,Human Resources
+25078,HireEmployee_CrossPlatform_IncludingExtras,Hiring Process,Human Resources
+25304,E2E_Hiring (short),Hiring Process,Human Resources
+25367,HireEmployee_CrossPlatformNoDepends,Hiring Process,Human Resources
+59811,.SAP Payroll - Pay Statement Validation,Payroll Management,Human Resources
+83876,HireEmployee_CrossPlatform,Hiring Process,Human Resources
+83877,HireEmployee_CrossPlatform_IncludingExtras,Hiring Process,Human Resources
+83878,HireEmployee_CrossPlatformNoDepends,Hiring Process,Human Resources
+83902,App_Close SAP SuccessFactors (BA),Employee Management,Human Resources
+12652,E2E_Account Creation - VPN Req'd,Hiring Process,Human Resources
+12983,Time Entry,Hiring Process,Human Resources
+12985,Payroll,Hiring Process,Human Resources
+13584,HCM_ChangeOfPay,Hiring Process,Human Resources
+14118,HCM_ChangeOfPay,Hiring Process,Human Resources
+12652,E2E_Account Creation - VPN Req'd,Hiring Process,Human Resources
+12983,Time Entry,Hiring Process,Human Resources
+12985,Payroll,Hiring Process,Human Resources
+13584,HCM_ChangeOfPay,Hiring Process,Human Resources
+14118,HCM_ChangeOfPay,Hiring Process,Human Resources
+50801,HCM_CATS_TimeEntry&Evaluation,Hiring Process,Human Resources
+60235,Check Infotypes,Hiring Process,Human Resources
+61934,HireEmployee_C_OnboardNewHire,Hiring Process,Human Resources
+63657,Short - SuccessFactors Job Requisition,Hiring Process,Human Resources
+83149,BP_Terminate Employee,Employee Management,Human Resources
+83846,HireEmployee_C_OnboardNewHire,Employee Management,Human Resources
+85296,End-To-End SuccessFactors + SAP GUI,Hiring Process,Human Resources
+10414,SAP_Logoff,System Access,IT Operations
+10416,SAP GUI Logon,System Access,IT Operations
+10659,SAP CRM Logon,System Access,IT Operations
+10660,SAP GUI Logoff,System Access,IT Operations
+10661,SAP GUI Logon,System Access,IT Operations
+10674,SOLMAN 7 Logon,System Access,IT Operations
+11673,SAP GUI Logon,System Access,IT Operations
+13913,SAP GUI Logon,System Access,IT Operations
+15410,SAP CRM7 Logon,System Access,IT Operations
+20121,Excel_StoreCellsInSpreadsheet,N/A,IT Operations
+22119,SAP Logoff,System Access,IT Operations
+22120,SAP Logon,System Access,IT Operations
+24735,LaunchSAP,System Access,IT Operations
+27600,Launch SAP GUI,System Access,IT Operations
+42935,UTL_Login_SAP,System Access,IT Operations
+42936,UTL_Logoff_SAP,System Access,IT Operations
+46648,S4/HanaMigrationFromSAPGUI,System Migration,IT Operations
+46719,SAP Logoff,System Access,IT Operations
+46720,SAP Logon,System Access,IT Operations
+46729,SAP Logoff,System Access,IT Operations
+46730,SAP ECC Logon,System Access,IT Operations
+46733,SAP Logoff,System Access,IT Operations
+46734,SAP Logon,System Access,IT Operations
+50836,UTL_SAPGui_Logoff,System Access,IT Operations
+50838,UTL_SAPGui_LogonSystemMessagePopupAutoEnter,System Access,IT Operations
+50840,UTL_SAPGui_SetDefaultOptions,System Configuration,IT Operations
+50842,UTL_SAPGui_GetSystemInfo,System Configuration,IT Operations
+56648,SAP GUI Logon,System Access,IT Operations
+59814,SAP Logon,System Access,IT Operations
+59926,SAP GUI Logon (1610),System Access,IT Operations
+62568,SAP GUI Logon (1809),System Access,IT Operations
+63964,SAP GUI Logon (1809),System Access,IT Operations
+64035,SAP GUI Logon (1809),System Access,IT Operations
+64531,4b3-4. Fiori Web-SAP GUI Security-Role Testing,Security Testing,IT Operations
+64543,Excel_StoreCellsInSpreadsheet,N/A,IT Operations
+68306,Start_SAPGUI_1809,System Access,IT Operations
+74266,Read Data from RFC Queue,N/A,IT Operations
+80891,Generate Test Data Example,N/A,IT Operations
+85295,SAP Logoff,System Access,IT Operations
+85417,Z_JJM_121SAP_SYNC_01_001,N/A,IT Operations
+85418,Z_JJM_121SAP_SYNC_02_001,N/A,IT Operations
+85419,Z_JJM_121SAP_SYNC_04_001,N/A,IT Operations
+85420,Z_JJM_121SAP_SYNC_05_001,N/A,IT Operations
+85421,Z_JJM_121SAP_SYNC_06_001,N/A,IT Operations
+85833,E2E_DataGen_LightningFioriSAPMainframeAPI_Cleanup_1809 - with Data,N/A,IT Operations
+85842,E2E_DataGen_LightningFioriSAPMainframeAPI_Cleanup,N/A,IT Operations
+85843,E2E_DataGen_LightningFioriSAPAPI_Cleanup,N/A,IT Operations
+86376,BA_CrossAppDemoStartup,N/A,IT Operations
+25070,.Fiori Web-SAP GUI Security-Role Testing,Security Testing,IT Operations
+58531,.SAP Hybris Marketing - Create Email Campaign,Marketing,Marketing
+10632,Create Material Master,Master Data Management,Materials Management
+10635,Create Vendor,Master Data Management,Materials Management
+10636,Adjust Inventory,Inventory Management,Materials Management
+10637,Adjust Inventory w/Manual Steps,Inventory Management,Materials Management
+10640,Procure to Pay,Procure to Pay,Materials Management
+10877,Procure to Pay with Data Creation,Procure to Pay,Materials Management
+12444,Procure to Pay,Procure to Pay,Materials Management
+12955,Adjust Inventory w/Manual Step,Inventory Management,Materials Management
+22481,Procure to Pay With Process Setup,Procure to Pay,Materials Management
+24684,BAPI Purchase Order Example,Purchase Order Management,Materials Management
+56951,Procure to Pay With Process Setup,Procure to Pay,Materials Management
+60617,Procure to Pay With Process Setup,Procure to Pay,Materials Management
+60640,Procure to Pay,Procure to Pay,Materials Management
+60642,Procure to Pay with Data Creation,Procure to Pay,Materials Management
+83745,Procure to Pay With Process Setup - NU,Procure to Pay,Materials Management
+73051,Partial Procure-to-Pay,Procure to Pay,Materials Management
+75719,Procure to Pay (P2P) Full,Procure to Pay,Materials Management
+75735,SAP Procure to Pay (P2P) Full,Procure to Pay,Materials Management
+77988,Oracle End to End Procurement,Procure to Pay,Materials Management
+81408,Park Vendor Invoice - FB60,Procure to Pay,Materials Management
+83026,Procure to Pay (P2P),Procure to Pay,Materials Management
+83755,Procure to Pay (P2P),Procure to Pay,Materials Management
+83796,Master Process Create Material,Master Data Management,Materials Management
+83879,Oracle End to End Procurement,Procure to Pay,Materials Management
+85768,E2E_CreateMaterial_CreateCustomerOrder,Order Creation Process,Materials Management
+64579,Demo Process,N/A,N/A
+68253,FIORI,N/A,N/A
+81126,Master,N/A,N/A
+81388,Dynamics 365 Business Central - Sales Order,N/A,N/A
+82713,MasterScreenshots,N/A,N/A
+82853,SF Classic,N/A,N/A
+83053,Example Capture,N/A,N/A
+83076,Example Capture,N/A,N/A
+83320,Capture,N/A,N/A
+83385,Check_Standard_Demo,N/A,N/A
+83592,Excel - Salesforce - SAP - Salesforce - Excel,N/A,N/A
+84120,Example,N/A,N/A
+84241,DemoAbeam,N/A,N/A
+84657,SAPLogon,N/A,N/A
+84741,BA_Excel Demo,N/A,N/A
+85041,Container + Read Excel,N/A,N/A
+85141,E2E MS365 Testing,N/A,N/A
+85178,RPA_Check MS365 Folder for Execution Trigger,N/A,N/A
+85629,E2E-NormalizedModel,N/A,N/A
+85722,E2E,N/A,N/A
+85801,Example,N/A,N/A
+86075,Excel - Salesforce - SAP - Salesforce - Excel,N/A,N/A
+86247,E2E Multiple App,N/A,N/A
+27605,ExecutePlan,N/A,N/A
+19510,Create Vendor Master - XK01,Procure to Pay,Procurement
+19510,Create Vendor Master - XK01,Procure to Pay,Procurement
+45587,Procure to Pay (P2P),Procure to Pay,Procurement
+46732,XK01 Create Vendor Master,Procure to Pay,Procurement
+60616,Procure to Pay (P2P),Procure to Pay,Procurement
+62301,Procure to Pay - SAPGUI,Procure to Pay,Procurement
+62305,Procure to Pay - SAPGUI,Procure to Pay,Procurement
+45577,SAP_VariantConfigurator - SAPGUI,Variant Configuration,IT Operations
+46629,SAP Variant Configurator - Fiori,Variant Configuration,IT Operations
+10639,Make To Order,Make to Order,Production Planning
+10664,Create Fulfillment Work Order (AS400),Plan to Manufacture (PTM),Production Planning
+10868,SAP - Create Bill of Materials w/ Data Creation,Plan to Manufacture (PTM),Production Planning
+10664,Create Fulfillment Work Order (AS400),Plan to Manufacture (PTM),Production Planning
+10868,SAP - Create Bill of Materials w/ Data Creation,Plan to Manufacture (PTM),Production Planning
+55280,Create Fulfillment Work Order (AS400),Plan to Manufacture (PTM),Production Planning
+60622,Create Material,Plan to Manufacture (PTM),Production Planning
+13015,SalesForce End to End,SalesForce,Sales and Distribution
+13506,Cross Platform End to End SalesForce_IE,SalesForce,Sales and Distribution
+16370,Cross Platform End to End SalesForce - VPN Required,SalesForce,Sales and Distribution
+22048,Cross Platform End to End SalesForce,SalesForce,Sales and Distribution
+23360,SalesForceFioriSAPMainframe_E2E,Cross Platform CRM,Sales and Distribution
+24078,Solman - Cross Platform End to End SalesForce on HANA 1610,Cross Platform CRM,Sales and Distribution
+24436,NewOpportunitySalesForceFioriSap_1809,Cross Platform CRM,Sales and Distribution
+24708,E2E_OTC_STEP1_SALESFORCE,Order to Cash,Sales and Distribution
+31996,CrossPlatformEndToEndSalesForceHANA,Cross Platform CRM,Sales and Distribution
+58456,.SAP C4HANA New Ticket,N/A,Sales and Distribution
+58458,.SAP C4HANA New Ticket,N/A,Sales and Distribution
+60373,.E2E Mobile EriBank-SAP Order,Order to Cash,Sales and Distribution
+62139,_E2E - Order to Cash - SFDC - S4 Fiori - SAP - AS400 - SAP,Order to Cash,Sales and Distribution
+62432,.SAP GUI Order-to-Cash N Entries,Order to Cash,Sales and Distribution
+63734,NewOpportunitySalesForceFioriSap,Cross Platform CRM,Sales and Distribution
+64025,P-Sales Order Email(API),Order to Cash,Sales and Distribution
+64459,SalesForceFioriSAPMainframe_E2E_1809,Cross Platform CRM,Sales and Distribution
+64540,4a2. SOAP_PriceLookup,Price Lookup Process,Sales and Distribution
+68502,SAP_HANA_OTC,Order to Cash,Sales and Distribution
+69585,SAP Commerce Cloud - Order Product-Register - Border States,Order to Cash,Sales and Distribution
+69593,SalesForceFioriSAPMainframe_E2E_1809_Example,Cross Platform CRM,Sales and Distribution
+70624,LightningFioriSAPMainframe_E2E_1809,Cross Platform CRM,Sales and Distribution
+72674,LightningFioriSAPMainframe_E2E_1809_Example,Cross Platform CRM,Sales and Distribution
+74202,SalesForceOracleEBSMainframe_E2E_Example,Cross Platform CRM,Sales and Distribution
+74243,_Order To Cash_SAPGUI_Includes Pick and Pack,Order to Cash,Sales and Distribution
+80970,.Mobile SAP C4-Hybris Commerce Order Product,Order to Cash,Sales and Distribution
+81109,LightningOracleMainframe_E2E_1809_Example,Cross Platform CRM,Sales and Distribution
+81443,ULTA Order-to-Cash,Order to Cash,Sales and Distribution
+81491,LightningFioriSAPMainframe_E2E_1809,Cross Platform CRM,Sales and Distribution
+81510,SAP_CreateSalesOrder_VL01n___QA,Order to Cash,Sales and Distribution
+82638,SalesForceFioriSAPMainframe_E2E_1809,Cross Platform CRM,Sales and Distribution
+82655,LightningFioriSAPMainframe_E2E_1809_Example,Cross Platform CRM,Sales and Distribution
+82656,DotNetLightningMainframe_E2E_1809_Example,Cross Platform CRM,Sales and Distribution
+82657,SalesForceFioriSAPMainframe_E2E_1809_Example,Cross Platform CRM,Sales and Distribution
+82658,SalesForceOracleEBSMainframe_E2E_Example,Cross Platform CRM,Sales and Distribution
+82726,SalesForceFioriSAPMainframe_E2E_1809,Cross Platform CRM,Sales and Distribution
+82792,SalesForceFioriSAPMainframe_E2E_1809,Cross Platform CRM,Sales and Distribution
+82821,SalesForceFioriSAPMainframe_E2E_1809,Cross Platform CRM,Sales and Distribution
+83052,2 LightningFioriSAPMainframe_E2E_1809,Cross Platform CRM,Sales and Distribution
+83452,TUI - E2E - New Sales Order - Import and Load Dataset,Order to Cash,Sales and Distribution
+83458,TUI - Excel - Salesforce - SAP - Salesforce - Excel,Cross Platform CRM,Sales and Distribution
+83483,Coty - E2E - SAP GUI - New Sales Order - Import and Load Dataset,Order to Cash,Sales and Distribution
+83484,Coty - E2E - Fiori - New Sales Order - Import and Load Dataset,Order to Cash,Sales and Distribution
+83485,Coty - Excel - Salesforce - SAP - Salesforce - Excel,Cross Platform CRM,Sales and Distribution
+83558,DotNetLightningMainframe_E2E_1809_Example,Cross Platform CRM,Sales and Distribution
+83880,SalesForceFioriSAPMainframe_E2E_1809,Cross Platform CRM,Sales and Distribution
+83882,LightningFioriSAPMainframe_E2E_1809,Cross Platform CRM,Sales and Distribution
+83884,SAP Only - OTC_1809,Order to Cash,Sales and Distribution
+83885,NewOpportunitySalesForceFioriSap_1809,Cross Platform CRM,Sales and Distribution
+83887,SAP Only - OTC_1809 pass,Order to Cash,Sales and Distribution
+84239,SAP Only - OTC_1809 pass,Order to Cash,Sales and Distribution
+84266,SAP Only - OTC_1809,Order to Cash,Sales and Distribution
+84785,LightningFioriSAPMainframe_E2E_1809(1),Cross Platform CRM,Sales and Distribution
+85268,BA_E2E_Variables (GenerateName-SFOpportunity...CreateOrder-UseOrder#),Order to Cash,Sales and Distribution
+85377,LightningFioriSAP_E2E_1809,Cross Platform CRM,Sales and Distribution
+85414,Order to Cash,Order to Cash,Sales and Distribution
+85543,NewOpportunitySalesForceFioriSap_1809,Cross Platform CRM,Sales and Distribution
+85770,LightningFioriSAPMainframe_E2E_1809 - with Data,Cross Platform CRM,Sales and Distribution
+85800,LightningFioriSAPMainframe_E2E_1809,Cross Platform CRM,Sales and Distribution
+85830,Integrated_OTC_CreateOrder_OBD_Billing_GNaik,Order to Cash,Sales and Distribution
+86088,SAP GUI - Create Sales Order - AN,Order to Cash,Sales and Distribution
+86100,LightningFioriSAP_E2E_(BA),Cross Platform CRM,Sales and Distribution
+86283,OTC_CreateOrder_OBD_Billing_Roles,Order to Cash,Sales and Distribution
+10420,Order to Cash (SAPGUI),Order to Cash,Sales and Distribution
+10452,Cross Platform End to End Order to Cash (CRM) - START VPN,Order to Cash,Sales and Distribution
+10472,Order to Cash Simple,Order to Cash,Sales and Distribution
+10493,Order to Cash (SAPGUI) with PGI,Order to Cash,Sales and Distribution
+10494,SAP Order to Cash,Order to Cash,Sales and Distribution
+10649,Order to Cash Simple,Order to Cash,Sales and Distribution
+10667,Order to Cash (SAPGUI),Order to Cash,Sales and Distribution
+10668,Order to Cash (SAPGUI) with PGI,Order to Cash,Sales and Distribution
+10669,SAP Order to Cash,Order to Cash,Sales and Distribution
+12436,SAP - SOA Quote - VPN REQUIRED,Order to Cash,Sales and Distribution
+12991,SAP Order Enty - Multiple Orders and Variation of Material Data,Order to Cash,Sales and Distribution
+17010,Order to Cash (SAPGUI & Fiori),Order to Cash,Sales and Distribution
+17047,Cross Platform End to End Order to Cash (Fiori),Order to Cash,Sales and Distribution
+20842,Demo Prep - VA01 and VL01N,Order to Cash,Sales and Distribution
+22050,OrderToCashPass,Order to Cash,Sales and Distribution
+23348,SAP Only - OTC_1809,Order to Cash,Sales and Distribution
+23557,Solman Demo VA01 Execution,Order to Cash,Sales and Distribution
+25398,E2E Order-to-Cash on SAP Hybris Commerce & HANA Fiori UI5,Order to Cash,Sales and Distribution
+25403,Online Order (SAPStore.com Hybris Commerce),Order to Cash,Sales and Distribution
+35491,VA01 Create Sales order and/or use for TBOM Gen.,Order to Cash,Sales and Distribution
+37543,VA01 TBOM Generation w FIORI,Order to Cash,Sales and Distribution
+39837,Solman FIORI Create Order Validate SAP Gui,Order to Cash,Sales and Distribution
+50106,SOAP_PriceLookup,Price Lookup Process,Sales and Distribution
+50109,SOAP_PriceLookup,Price Lookup Process,Sales and Distribution
+56538,.SAP Create Order Parallel,Order to Cash,Sales and Distribution
+56621,SOAP_PriceLookup,Price Lookup Process,Sales and Distribution
+56644,.SAP Create Order IDoc Excel Process,Order to Cash,Sales and Distribution
+11610,E2E_ExportVBAKValidateVBAK,Order to Cash,Sales and Distribution
+11919,SAP - SOA Quote,Quotation to Cash (QTC),Sales and Distribution
+11926,Cross Platform - Quote to Cash - E2E,Quotation to Cash (QTC),Sales and Distribution
+12463,E2E_Cross Platform Order To Fulfillment,Order to Cash,Sales and Distribution
+12617,Cross Platform E2E - Quote to Cash - VPN REQUIRED,Quotation to Cash (QTC),Sales and Distribution
+12805,UTL_iDocBuilder,Order to Cash,Sales and Distribution
+13553,OTC_StandardOrder,Order to Cash,Sales and Distribution
+14115,VA01_CreateStandardOrder,Order to Cash,Sales and Distribution
+14210,GB OTC Ides Test,Order to Cash,Sales and Distribution
+15522,OTC Test,Order to Cash,Sales and Distribution
+17309,SAP - VL01N - Create Delivery (Josh Kleen),Order to Cash,Sales and Distribution
+17311,End-to-End Order to Cash,Order to Cash,Sales and Distribution
+17315,Master OTC,Order to Cash,Sales and Distribution
+17598,Cross Platform - Quote to Cash - E2E,Quotation to Cash (QTC),Sales and Distribution
+17712,Cross Platform - Quote to Cash - E2E,Quotation to Cash (QTC),Sales and Distribution
+18574,End to End OTC - iPhone6S,Order to Cash,Sales and Distribution
+20134,FIORI - Order to Cash - End to End,Order to Cash,Sales and Distribution
+20849,Mveatch Demo 11/14,Order to Cash,Sales and Distribution
+20988,FIORI - Order to Cash - End to End,Order to Cash,Sales and Distribution
+21021,Cross Platform Mobile Demo using iPhone 6S,Order to Cash,Sales and Distribution
+22658,WE02,Order to Cash,Sales and Distribution
+23101,Simple Order,Order to Cash,Sales and Distribution
+23350,VA01_CreateStandardOrder,Order to Cash,Sales and Distribution
+23408,VL02N Post Goods Issue 1610,Order to Cash,Sales and Distribution
+23584,WE19 Testing,Order to Cash,Sales and Distribution
+24085,VA01_Fiori_CreateStandardOrder,Order to Cash,Sales and Distribution
+24101,Simple order,Order to Cash,Sales and Distribution
+24718,E2E_OrderToCash,Order to Cash,Sales and Distribution
+27604,Z_BIKE_SALESORDER2_001,Order to Cash,Sales and Distribution
+30714,_Fiori Order and GUI Delivery,Order to Cash,Sales and Distribution
+32019,Simple Order,Order to Cash,Sales and Distribution
+35386,Create Order Solman Automation,Order to Cash,Sales and Distribution
+35500,Z_SA_DEMO_VA01_TBOM_GENERATION_002,Order to Cash,Sales and Distribution
+37605,Z_CROSSPLAT_E2E_SF_1610_2_001,Order to Cash,Sales and Distribution
+37639,E2E_OrderToCash(1),Order to Cash,Sales and Distribution
+42926,Wipro_SD_VA01,Order to Cash,Sales and Distribution
+42980,Simple Order,Order to Cash,Sales and Distribution
+42989,SAP Create Order,Order to Cash,Sales and Distribution
+11610,E2E_ExportVBAKValidateVBAK,Order to Cash,Sales and Distribution
+11919,SAP - SOA Quote,Quotation to Cash (QTC),Sales and Distribution
+11926,Cross Platform - Quote to Cash - E2E,Quotation to Cash (QTC),Sales and Distribution
+12463,E2E_Cross Platform Order To Fulfillment,Order to Cash,Sales and Distribution
+12617,Cross Platform E2E - Quote to Cash - VPN REQUIRED,Quotation to Cash (QTC),Sales and Distribution
+12805,UTL_iDocBuilder,Order to Cash,Sales and Distribution
+13553,OTC_StandardOrder,Order to Cash,Sales and Distribution
+14115,VA01_CreateStandardOrder,Order to Cash,Sales and Distribution
+14210,GB OTC Ides Test,Order to Cash,Sales and Distribution
+15522,OTC Test,Order to Cash,Sales and Distribution
+17309,SAP - VL01N - Create Delivery (Josh Kleen),Order to Cash,Sales and Distribution
+17311,End-to-End Order to Cash,Order to Cash,Sales and Distribution
+17315,Master OTC,Order to Cash,Sales and Distribution
+17598,Cross Platform - Quote to Cash - E2E,Quotation to Cash (QTC),Sales and Distribution
+17712,Cross Platform - Quote to Cash - E2E,Quotation to Cash (QTC),Sales and Distribution
+18574,End to End OTC - iPhone6S,Order to Cash,Sales and Distribution
+20134,FIORI - Order to Cash - End to End,Order to Cash,Sales and Distribution
+20849,Mveatch Demo 11/14,Order to Cash,Sales and Distribution
+20988,FIORI - Order to Cash - End to End,Order to Cash,Sales and Distribution
+21021,Cross Platform Mobile Demo using iPhone 6S,Order to Cash,Sales and Distribution
+22658,WE02,Order to Cash,Sales and Distribution
+23101,Simple Order,Order to Cash,Sales and Distribution
+23350,VA01_CreateStandardOrder,Order to Cash,Sales and Distribution
+23408,VL02N Post Goods Issue 1610,Order to Cash,Sales and Distribution
+23584,WE19 Testing,Order to Cash,Sales and Distribution
+24085,VA01_Fiori_CreateStandardOrder,Order to Cash,Sales and Distribution
+24101,Simple order,Order to Cash,Sales and Distribution
+24718,E2E_OrderToCash,Order to Cash,Sales and Distribution
+27604,Z_BIKE_SALESORDER2_001,Order to Cash,Sales and Distribution
+30714,_Fiori Order and GUI Delivery,Order to Cash,Sales and Distribution
+32019,Simple Order,Order to Cash,Sales and Distribution
+35386,Create Order Solman Automation,Order to Cash,Sales and Distribution
+35500,Z_SA_DEMO_VA01_TBOM_GENERATION_002,Order to Cash,Sales and Distribution
+37605,Z_CROSSPLAT_E2E_SF_1610_2_001,Order to Cash,Sales and Distribution
+37639,E2E_OrderToCash(1),Order to Cash,Sales and Distribution
+42926,Wipro_SD_VA01,Order to Cash,Sales and Distribution
+42980,Simple Order,Order to Cash,Sales and Distribution
+42989,SAP Create Order,Order to Cash,Sales and Distribution
+42990,SAP Outbound Delivery,Order to Cash,Sales and Distribution
+44268,Create Sales Order Using Data from Excel and Recording Sales Order Number in Excel,Order to Cash,Sales and Distribution
+44343,GUI Order,Order to Cash,Sales and Distribution
+44346,Create Sales Order Using Data from Excel and Recording Sales Order Number in Excel,Order to Cash,Sales and Distribution
+44386,Create Sales Order Using Data from Excel and Recording Sales Order Number in Excel(1),Order to Cash,Sales and Distribution
+48919,SAP Order-to-Cash,Order to Cash,Sales and Distribution
+50122,Create Sales Order Using Data from Excel and Recording Sales Order Number in Excel,Order to Cash,Sales and Distribution
+50130,Create Sales Order Using Data from Excel and Store Sales Order Number in Excel,Order to Cash,Sales and Distribution
+50226,VA01_BikeOrders,Order to Cash,Sales and Distribution
+50230,Fiori_SalesOrder_BikePart,Order to Cash,Sales and Distribution
+50238,VA01_BikeOrders(1),Order to Cash,Sales and Distribution
+50239,Fiori_SalesOrder_BikePart(1),Order to Cash,Sales and Distribution
+50247,Rick1,Order to Cash,Sales and Distribution
+50253,Rick Variables,Order to Cash,Sales and Distribution
+50258,Fiori_SalesOrder_BikePart,Order to Cash,Sales and Distribution
+50790,OTC_StandardSalesOrder_PRtoGR_ApplyCash_DEMO,Order to Cash,Sales and Distribution
+50791,OTC_StandardSalesOrder_PrdOrder_ApplyCash_DEMO,Order to Cash,Sales and Distribution
+50792,OTC_StandardSalesOrder_ApplyCash_DEMO,Order to Cash,Sales and Distribution
+53967,GUI Order,Order to Cash,Sales and Distribution
+53970,Create Sales Order Using Data from Excel and Recording Sales Order Number in Excel,Order to Cash,Sales and Distribution
+55252,Simple Order,Order to Cash,Sales and Distribution
+55293,VL01N,Order to Cash,Sales and Distribution
+55311,Example Process,Order to Cash,Sales and Distribution
+55315,E2E,Order to Cash,Sales and Distribution
+55319,Example Process,Order to Cash,Sales and Distribution
+55385,Simple Order,Order to Cash,Sales and Distribution
+56450,Simple Order - Using Incognito in Browser,Order to Cash,Sales and Distribution
+58415,SAP Create Order Multi-Environment,Order to Cash,Sales and Distribution
+58416,SAP Outbound Delivery,Order to Cash,Sales and Distribution
+58419,SAP Create Order - Net Value,Order to Cash,Sales and Distribution
+58420,SAP Outbound Delivery,Order to Cash,Sales and Distribution
+60456,Sales Order and Outbound Delivery,Order to Cash,Sales and Distribution
+60495,VA01,Order to Cash,Sales and Distribution
+60509,Salesforce and Fiori,Order to Cash,Sales and Distribution
+60532,Order-E2E,Order to Cash,Sales and Distribution
+62122,Order to Cash - SAPGUI,Order to Cash,Sales and Distribution
+63739,Order-E2E,Order to Cash,Sales and Distribution
+63870,O2C,Order to Cash,Sales and Distribution
+63941,VA01,Order to Cash,Sales and Distribution
+64216,Run Script,Order to Cash,Sales and Distribution
+64250,E2E,Order to Cash,Sales and Distribution
+64470,Fiori Order,Order to Cash,Sales and Distribution
+64542,4b1. Create Sales Order Using Data from Excel and Recording Sales Order Number in Excel,Order Creation Process,Sales and Distribution
+64590,S/4HANA 1809 Fiori Order and GUI Delivery,Order to Cash,Sales and Distribution
+64601,Order-E2E,Order to Cash,Sales and Distribution
+64618,Order-E2E Fiori,Order to Cash,Sales and Distribution
+68504,SAP_DeliverAndBil_Pass,Order to Cash,Sales and Distribution
+69554,E2E - 1809 - Fiori,Order Creation Process,Sales and Distribution
+72707,E2E - 1809 - SAP,Order Creation Process,Sales and Distribution
+73135,A Sample E2E Parent Process,Order Creation Process,Sales and Distribution
+74172,Simple Order 1809,Order to Cash,Sales and Distribution
+74177,Simple Order 1809,Order to Cash,Sales and Distribution
+74252,E2E - 1809 - Fiori VA01 to SAPGUI VL01N,Order Creation Process,Sales and Distribution
+74291,Simple Order,Order to Cash,Sales and Distribution
+75554,Read order details and update recordset,Order Creation Process,Sales and Distribution
+75560,Both Create and Update,Order Creation Process,Sales and Distribution
+76889,SAP Va01,Order to Cash,Sales and Distribution
+80930,Simple Order,Order to Cash,Sales and Distribution
+81116,Verification and Logic VA01 - VA02 - VA03,Order to Cash,Sales and Distribution
+81176,Create Sales Order - Demo EM,Order Creation Process,Sales and Distribution
+81306,Simple Order,Order to Cash,Sales and Distribution
+81406,VA01,Order Creation Process,Sales and Distribution
+81490,Sales Order(Fiori) Delivery and Shipment(SAPGUI),Order to Cash,Sales and Distribution
+81492,Order to Cash - SAPGUI,Order to Cash,Sales and Distribution
+82642,SAP Order-to-Cash,Order to Cash,Sales and Distribution
+82653,SAP_VA01,Order Creation Process,Sales and Distribution
+82673,Simple Order,Order to Cash,Sales and Distribution
+82678,Create Sales Order,Sales Order Process,Sales and Distribution
+82718,VA01,Sales Order Process,Sales and Distribution
+82727,Sales Order(Fiori) Delivery and Shipment(SAPGUI),Order to Cash,Sales and Distribution
+82728,Create Sales Documents,Sales Order Process,Sales and Distribution
+82769,Sales Order(Fiori) Delivery and Shipment(SAPGUI),Order to Cash,Sales and Distribution
+82775,SAP GUI Order,Order to Cash,Sales and Distribution
+82784,Sales Order(Fiori)_Delivery and Shipment(SAPGUI),Order to Cash,Sales and Distribution
+82827,Create Sales Order,Sales Order Process,Sales and Distribution
+82966,VA01,Order Creation Process,Sales and Distribution
+82967,VA01 and VL01n,Order to Cash,Sales and Distribution
+83309,Master Process - Cricut Shopping and Registering for new Account,Order to Cash,Sales and Distribution
+83364,E2E - OTC - SAPGUI,Order to Cash,Sales and Distribution
+83395,E2E - Fiori Sales Order - SAPGUI Outbound Delivery,Order to Cash,Sales and Distribution
+83429,E2E - OTC - Multiple Logins,Order to Cash,Sales and Distribution
+83652,GUI Order and Delivery,Order to Cash,Sales and Distribution
+83706,Sales Order Va01 Master,Sales Order Process,Sales and Distribution
+83762,SAPGUI_Delivery&Billing - NU,Delivery and Billing Process,Sales and Distribution
+83881,Fiori_CreateStandardOrder_1809,Sales Order Process,Sales and Distribution
+83886,Fiori_CreateOrder_1809,Sales Order Process,Sales and Distribution
+84264,Fiori_CreateOrder_1809,Sales Order Process,Sales and Distribution
+84337,BA_E2E-FIORI CREATE SALES ORDER(1),Order to Cash,Sales and Distribution
+84584,VA05 - ALV Grid,Sales Order Process,Sales and Distribution
+84610,E2E - Load Data and Create Order,Order to Cash,Sales and Distribution
+84812,Z_NI_OTC_VA01_001,Order to Cash,Sales and Distribution
+84917,E2E - Sales Order - Loop,Order to Cash,Sales and Distribution
+84925,E2E - Sales Order - Loop,Order to Cash,Sales and Distribution
+84998,.NetLightningFioriSAPMainframe_E2E_1809,Order Creation Process,Sales and Distribution
+85033,E2E - OTC,Order to Cash,Sales and Distribution
+85047,E2E - OTC,Order to Cash,Sales and Distribution
+85197,OTC001_Fiori_SellFromStock_WithOutboundDelivery,Order to Cash,Sales and Distribution
+85251,OTC600,Order to Cash,Sales and Distribution
+85381,Call Outbound Delivery,Delivery and Billing Process,Sales and Distribution
+85496,E2E - OTC - SAPGUI - RPA,Order to Cash,Sales and Distribution
+85619,SAP - Create Sales Order,Sales Order Process,Sales and Distribution
+85793,BA_SAPGUI_CreateOrder_With Simple Recordset and Launch and Logout,Order Creation Process,Sales and Distribution
+85974,SAP GUI Order,Order to Cash,Sales and Distribution
+86016,SAP GUI Order,Order to Cash,Sales and Distribution
+86020,SAP GUI Order with Perfecto,Order to Cash,Sales and Distribution
+86034,WebGUI_SAP GUI Order,Order to Cash,Sales and Distribution
+86121,Fiori Outbound Delivery VL01N,Order to Cash,Sales and Distribution
+86266,Integrated_CreateOrder,Order Creation Process,Sales and Distribution
+86284,Outlook_OTC_StandardOrder_GNaik,Order to Cash,Sales and Distribution
+86367,OTC_CreateSalesOrder_PickpackShipping,Order to Cash,Sales and Distribution
