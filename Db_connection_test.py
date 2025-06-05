@@ -24,12 +24,12 @@ def connect_to_database(max_retries=3, retry_delay=1):
         try:
             # Connection Details
             conn = pymssql.connect(  
-                host=os.getenv("SQL_HOST"),
-                port=os.getenv("SQL_PORT"),
-                server=os.getenv("SQL_SERVER"),
-                user=os.getenv("SQL_USER"),
-                password=os.getenv("SQL_PASSWORD"),
-                database=os.getenv("SQL_DATABASE"),
+                host= os.getenv("SQL_HOST"),
+                port= os.getenv("SQL_PORT"),
+                server= os.getenv("SQL_SERVER"),
+                user= os.getenv("SQL_USER"),
+                password= 'Welcome@123',
+                database= os.getenv("SQL_DATABASE"),
                 as_dict=True,
                 login_timeout=3  # Reduced timeout to match Upload_Base_Tables.py
             )
@@ -50,3 +50,18 @@ def connect_to_database(max_retries=3, retry_delay=1):
             else:
                 logger.error("Max retries reached. Could not connect to database.")
                 return None
+
+def main():
+    """Main function to test database connection."""
+    logger.info("Attempting to connect to database...")
+    conn = connect_to_database()
+    
+    if conn:
+        logger.info("Database connection successful!")
+        conn.close()
+        logger.info("Database connection closed.")
+    else:
+        logger.error("Failed to establish database connection.")
+
+if __name__ == "__main__":
+    main()

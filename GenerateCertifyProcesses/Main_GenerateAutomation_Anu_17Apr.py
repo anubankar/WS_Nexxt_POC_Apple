@@ -366,7 +366,7 @@ if __name__ == "__main__":
 
     # Connect to SQL Server DB
     conn = connect_to_database()
-    cursor = conn.cursor(as_dict=True)
+    cursor = conn.cursor()
     
     # Define base_prompt
     base_prompt = define_prompt()
