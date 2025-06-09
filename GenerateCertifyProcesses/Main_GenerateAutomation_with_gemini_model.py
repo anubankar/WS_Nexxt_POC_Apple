@@ -30,6 +30,12 @@ logger = logging.getLogger(__name__)
 # Define List
 ProcessList = pd.DataFrame(columns=["Step_Name", "SAP_Screen" ,"ProcessID", "similarity_score"])
 
+#Openrouter Setup
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=os.getenv("OPENROUTER_API_KEY")
+)
+
 # Add to Process List
 def add_entry_to_processlist(step_name, sap_screen, process_id, similarity_score):
     global ProcessList
@@ -148,23 +154,8 @@ def fetch_screen_object_mappingNew(sap_screen, description, applicationVersionID
     Return only the program name without any additional text or explanation."""
     
     # Call OpenAI API
-    # response = client.chat.completions.create(
-    #     model="gpt-4o-mini",
-    #     messages=[
-    #         {"role": "system", "content": "You are an expert in SAP transaction codes and their corresponding program names."},
-    #         {"role": "user", "content": prompt}
-    #     ],
-    #     temperature=0.1,
-    #     max_tokens=50
-    # )
-    client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=os.getenv("OPENROUTER_API_KEY")
-)
-
-    model="google/gemini-2.5-flash-preview-05-20"
     response = client.chat.completions.create(
-        model=model,
+        model="google/gemini-2.5-flash-preview-05-20",
        messages=[
             {"role": "system", "content": "You are an expert in SAP transaction codes and their corresponding program names."},
             {"role": "user", "content": prompt}
@@ -187,23 +178,8 @@ def fetch_screen_object_mappingNew(sap_screen, description, applicationVersionID
     """
 
     # Call OpenAI API
-    # response = client.chat.completions.create(
-    #     model="gpt-4o-mini",
-    #     messages=[
-    #         {"role": "system", "content": "You are an expert in SAP transaction codes, screens and field names."},
-    #         {"role": "user", "content": prompt}
-    #     ],
-    #     temperature=0.1,
-    #     max_tokens=500
-    # )
-    client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=os.getenv("OPENROUTER_API_KEY")
-)
-
-    model="google/gemini-2.5-flash-preview-05-20"
     response = client.chat.completions.create(
-        model=model,
+        model="google/gemini-2.5-flash-preview-05-20",
         messages=[
             {"role": "system", "content": "You are an expert in SAP transaction codes, screens and field names."},
             {"role": "user", "content": prompt}
@@ -303,20 +279,8 @@ def callLlmForJson(sap_screen, description, expected_result, base_prompt, refere
         file.write(usrprompt)
 
     # Call OpenAI GPT-4o API
-    # response = openai.chat.completions.create(
-    #     model="gpt-4o-mini",
-    #     messages=[{"role": "system", "content": sysprompt},
-    #                 {"role": "user", "content": usrprompt}],
-    #     temperature= 0.0
-    # )
-    client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=os.getenv("OPENROUTER_API_KEY")
-)
-
-    model="google/gemini-2.5-flash-preview-05-20"
     response = client.chat.completions.create(
-        model=model,
+        model="google/gemini-2.5-flash-preview-05-20",
         messages=[
             {"role": "system", "content": sysprompt},
             {"role": "user", "content": usrprompt}

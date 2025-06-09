@@ -79,142 +79,160 @@
             
 SAP Object and Screen mapping  is as follows: [
     {
-        "Component": "GuiButton",
-        "Object Name": "GuiButton.BT_SUCH",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "BT_SUCH"
+        "Component": "GuiTab",
+        "Object Name": "GuiTab.T\\01",
+        "Screen": "SAPMV45A:4002",
+        "Field_Name": "T\\01"
+    },
+    {
+        "Component": "GuiTab",
+        "Object Name": "GuiTab.T\\06",
+        "Screen": "SAPMV45A:4002",
+        "Field_Name": "T\\06"
     },
     {
         "Component": "GuiCTextField",
-        "Object Name": "GuiCTextField.VBAK-VBELN",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-VBELN"
-    },
-    {
-        "Component": "GuiButton",
-        "Object Name": "GuiButton.btn[13]",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "btn[13]"
-    },
-    {
-        "Component": "GuiCTextField",
-        "Object Name": "GuiCTextField.VBAK-WAERK",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-WAERK"
-    },
-    {
-        "Component": "GuiCTextField",
-        "Object Name": "GuiCTextField.VBAK-ZTERM",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-ZTERM"
-    },
-    {
-        "Component": "GuiCTextField",
-        "Object Name": "GuiCTextField.VBAK-INCO1",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-INCO1"
+        "Object Name": "GuiCTextField.VBAP-NETPR",
+        "Screen": "SAPMV45A:4002",
+        "Field_Name": "VBAP-NETPR"
     },
     {
         "Component": "GuiButton",
         "Object Name": "GuiButton.btn[0]",
-        "Screen": "SAPMV45A:0102",
+        "Screen": "SAPMV45A:4002",
         "Field_Name": "btn[0]"
     },
     {
         "Component": "GuiCTextField",
-        "Object Name": "GuiCTextField.VBAK-AUART",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-AUART"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.LIKP-WSTATUS",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "LIKP-WSTATUS"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.VBAK-VBELN",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-VBELN"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.LIKP-VBELN",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "LIKP-VBELN"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.VBAK-KNZZE",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-KNZZE"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.VBAK-KBETR",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-KBETR"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.VBAK-AUART",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-AUART"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.VBAK-KUNNR",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-KUNNR"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.VBAK-MATNR",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-MATNR"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.VBAK-VKORG",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-VKORG"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.VBAK-VTWEG",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-VTWEG"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.VL03N-STATUS",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VL03N-STATUS"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.SomeField",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "SomeField"
-    },
-    {
-        "Component": "GuiTextField",
-        "Object Name": "GuiTextField.VBAK-STATUS",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "VBAK-STATUS"
-    },
-    {
-        "Component": "GuiButton",
-        "Object Name": "GuiButton.btn[1]",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "btn[1]"
+        "Object Name": "GuiCTextField.VBEP-WERKS",
+        "Screen": "SAPMV45A:4002",
+        "Field_Name": "VBEP-WERKS"
     },
     {
         "Component": "GuiCTextField",
-        "Object Name": "GuiCTextField.KONV-KBETR",
-        "Screen": "SAPMV45A:0102",
-        "Field_Name": "KONV-KBETR"
+        "Object Name": "GuiCTextField.VBEP-ZTERM",
+        "Screen": "SAPMV45A:4002",
+        "Field_Name": "VBEP-ZTERM"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBEP-INTTP",
+        "Screen": "SAPMV45A:4002",
+        "Field_Name": "VBEP-INTTP"
+    },
+    {
+        "Component": "GuiTab",
+        "Object Name": "GuiTab.T\\01",
+        "Screen": "SAPMV45A:4008",
+        "Field_Name": "T\\01"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-VBELN",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "VBAK-VBELN"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-WAERK",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "VBAK-WAERK"
+    },
+    {
+        "Component": "GuiTableControl",
+        "Object Name": "SAPMV45ATCTRL_U_ERF_AUFTRAG",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "SAPMV45ATCTRL_U_ERF_AUFTRAG"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.KUWEV-KUNNR",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "KUWEV-KUNNR"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.BT_HEAD(1)",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "BT_HEAD(1)"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBKD-BSTDK(1)",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "VBKD-BSTDK(1)"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBKD-BSTKD(1)",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "VBKD-BSTKD(1)"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBKD-BSTDK",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "VBKD-BSTDK"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "KUAGV-KUNNR",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "KUAGV-KUNNR"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-NETW",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "VBAK-NETW"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBKD-BSTKD",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "VBKD-BSTKD"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.KUAGV-TXTPA",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "KUAGV-TXTPA"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.KUWEV-TXTPA",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "KUWEV-TXTPA"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBKD-BSTK",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "VBKD-BSTK"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBAK-NETWR",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "VBAK-NETWR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBKD-BSTKD",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "VBKD-BSTKD"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.MARA-MATNR",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "MARA-MATNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBEP-LFIMG",
+        "Screen": "SAPMV45A:4021",
+        "Field_Name": "VBEP-LFIMG"
     },
     {
         "Component": "GuiButton",
@@ -500,39 +518,429 @@ SAP Object and Screen mapping  is as follows: [
     },
     {
         "Component": "GuiCTextField",
-        "Object Name": "GuiCTextField.VBAK-VBELN",
-        "Screen": "SAPMV45A:0103",
-        "Field_Name": "VBAK-VBELN"
+        "Object Name": "GuiCTextField.VBAK-BNDDT",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-BNDDT"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBKD-ZTERM",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBKD-ZTERM"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.VBKD-INCO2",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBKD-INCO2"
+    },
+    {
+        "Component": "GuiButton",
+        "Object Name": "GuiButton.btn[5]",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "btn[5]"
+    },
+    {
+        "Component": "GuiTab",
+        "Object Name": "GuiTab.T\\01",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "T\\01"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBKD-INCO1",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBKD-INCO1"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBKD-ZTERM(1)",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBKD-ZTERM(1)"
+    },
+    {
+        "Component": "GuiTextField",
+        "Object Name": "GuiTextField.RV45A-BTGEW",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "RV45A-BTGEW"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.KUAGV-KUNNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "KUAGV-KUNNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.KUWEV-KUNNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "KUWEV-KUNNR"
+    },
+    {
+        "Component": "GuiTableControl",
+        "Object Name": "GuiTableControl.SAPMV45ATCTRL_U_ERF_AUFTRAG",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "SAPMV45ATCTRL_U_ERF_AUFTRAG"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.RV45A-KETDAT",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "RV45A-KETDAT"
+    },
+    {
+        "Component": "GuiTab",
+        "Object Name": "GuiTab.T\\06",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "T\\06"
+    },
+    {
+        "Component": "GuiComboBox",
+        "Object Name": "GuiComboBox.VBAK-AUGRU",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-AUGRU"
+    },
+    {
+        "Component": "GuiComboBox",
+        "Object Name": "GuiComboBox.VBAK-LIFSK",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-LIFSK"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LIPS-VBELN",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LIPS-VBELN"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LIPS-POSEX",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LIPS-POSEX"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LIPS-MATNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LIPS-MATNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LIPS-QUALF",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LIPS-QUALF"
     },
     {
         "Component": "GuiButton",
         "Object Name": "GuiButton.btn[0]",
-        "Screen": "SAPMV45A:0103",
+        "Screen": "SAPMV45A:4001",
         "Field_Name": "btn[0]"
     },
     {
-        "Component": "GuiButton",
-        "Object Name": "GuiButton.PrintPDF",
-        "Screen": "SAPMV45A:0103",
-        "Field_Name": "PrintPDF"
+        "Component": "GuiTab",
+        "Object Name": "GuiTab.T\\\\01",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "T\\\\01"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-KUNNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-KUNNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-KUNNR2",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-KUNNR2"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-STRAS",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-STRAS"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-MATNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-MATNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-KWMENG",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-KWMENG"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-BSTKD",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-BSTKD"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-NTGEW",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-NTGEW"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-Z144",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-Z144"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-ZABE",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-ZABE"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-PREIS",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-PREIS"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-KUNWE",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-KUNWE"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-CPUDT",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-CPUDT"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.XXX-PLANT",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "XXX-PLANT"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.XXX-ZTERM",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "XXX-ZTERM"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.XXX-INT1",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "XXX-INT1"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-PRCTR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-PRCTR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBEH-ZABE",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBEH-ZABE"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-KNUMH",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-KNUMH"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.POSNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "POSNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.KUNNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "KUNNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.BSTKD",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "BSTKD"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.MATNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "MATNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LFIMG",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LFIMG"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LTAB-ANZS",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LTAB-ANZS"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LTAB-ANZG",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LTAB-ANZG"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LTAB-KUNNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LTAB-KUNNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LTAB-MATNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LTAB-MATNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LTAB-QUANTITY",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LTAB-QUANTITY"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.position-material",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "position-material"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.position-quantity",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "position-quantity"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-AUGRU",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-AUGRU"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LIPS-SOLD_TO",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LIPS-SOLD_TO"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LIPS-SHIP_TO",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LIPS-SHIP_TO"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LIPS-ZCUSTOMER_REF",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LIPS-ZCUSTOMER_REF"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LIPS-QUANTITY",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LIPS-QUANTITY"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-PRICING",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-PRICING"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.LIPS-KWMENG",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "LIPS-KWMENG"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-KONNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-KONNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-KUNNR_SH",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-KUNNR_SH"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-QUANTITY",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-QUANTITY"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-AUART",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-AUART"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-KUNNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-KUNNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-MATNR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-MATNR"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-VKORG",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-VKORG"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAK-VTWEG",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAK-VTWEG"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-KUNNR_SOLD_TO",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-KUNNR_SOLD_TO"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.VBAP-KEGPAR",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "VBAP-KEGPAR"
     },
     {
         "Component": "GuiButton",
-        "Object Name": "GuiButton.AttachRun",
-        "Screen": "SAPMV45A:0103",
-        "Field_Name": "AttachRun"
+        "Object Name": "GuiButton.btn[11]",
+        "Screen": "SAPMV45A:4001",
+        "Field_Name": "btn[11]"
+    },
+    {
+        "Component": "GuiCTextField",
+        "Object Name": "GuiCTextField.KUAGV-KUNNR",
+        "Screen": "SAPMV45A:4012",
+        "Field_Name": "KUAGV-KUNNR"
     },
     {
         "Component": "GuiButton",
-        "Object Name": "GuiButton.btn[1]",
-        "Screen": "SAPMV45A:0103",
-        "Field_Name": "btn[1]"
-    },
-    {
-        "Component": "GuiButton",
-        "Object Name": "GuiButton.btn[2]",
-        "Screen": "SAPMV45A:0103",
-        "Field_Name": "btn[2]"
+        "Object Name": "GuiButton.btn[0]",
+        "Screen": "SAPMV45A:4003",
+        "Field_Name": "btn[0]"
     }
 ]
 Strictly follow Screen corresponding to the object when you are generate step. Please think step by step and only add step when corresponding object belong to the screen as per mapping json

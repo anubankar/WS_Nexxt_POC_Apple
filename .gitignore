@@ -17,3 +17,4 @@ TransAlta/__pycache__/Db_Connections.cpython-311.pyc
 TransAlta/__pycache__/Extract_Procedure_Tables.cpython-311.pyc
 TransAlta/__pycache__/FindReferenceProcess.cpython-311.pyc
 TransAlta/__pycache__/Generate_Certify_Step.cpython-311.pyc
+GenerateCertifyProcesses/worksoft.db

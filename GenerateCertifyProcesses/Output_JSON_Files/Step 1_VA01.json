@@ -1,152 +1,170 @@
 [
-    {
-        "name": "Sales Document Creation",
-        "Application": "S4 Hana Sales and Distribution",
-        "steps": [
-            {
-                "Step": 1,
-                "Object": "GuiOkCodeField.wnd[0]/tbar[0]/okcd",
-                "ObjectName": "okcd",
-                "Action": "Enter transaction code",
-                "ActionDescription": "Enter the transaction code 'VA01' in the OK code field",
-                "Screen": "SAP Main",
-                "Screen Name": "SAP Main"
-            },
-            {
-                "Step": 2,
-                "Object": "GuiCTextField.VBAK-AUART",
-                "ObjectName": "Order Type",
-                "Action": "Enter content into an EditBox",
-                "ActionDescription": "Enter the order type",
-                "Screen": "SAPMV45A:0101",
-                "Screen Name": "Create Sales Order"
-            },
-            {
-                "Step": 3,
-                "Object": "GuiCTextField.VBAK-VKORG",
-                "ObjectName": "Sales Organization",
-                "Action": "Enter content into an EditBox",
-                "ActionDescription": "Enter the sales organization",
-                "Screen": "SAPMV45A:0101",
-                "Screen Name": "Create Sales Order"
-            },
-            {
-                "Step": 4,
-                "Object": "GuiCTextField.VBAK-VTWEG",
-                "ObjectName": "Distribution Channel",
-                "Action": "Enter content into an EditBox",
-                "ActionDescription": "Enter the distribution channel",
-                "Screen": "SAPMV45A:0101",
-                "Screen Name": "Create Sales Order"
-            },
-            {
-                "Step": 5,
-                "Object": "GuiCTextField.VBAK-SPART",
-                "ObjectName": "Division",
-                "Action": "Enter content into an EditBox",
-                "ActionDescription": "Enter the division",
-                "Screen": "SAPMV45A:0101",
-                "Screen Name": "Create Sales Order"
-            },
-            {
-                "Step": 6,
-                "Object": "GuiButton.btn[0]",
-                "ObjectName": "Press Enter",
-                "Action": "Press Button",
-                "ActionDescription": "Press Enter to proceed",
-                "Screen": "SAPMV45A:0101",
-                "Screen Name": "Create Sales Order"
-            },
-            {
-                "Step": 7,
-                "Object": "GuiCTextField.KUAGV-KUNNR",
-                "ObjectName": "Sold to party",
-                "Action": "Enter text",
-                "ActionDescription": "Enter the sold to party",
-                "Screen": "SAPMV45A:4701",
-                "Screen Name": "Sales Order Items"
-            },
-            {
-                "Step": 8,
-                "Object": "GuiCTextField.KUWEV-KUNNR",
-                "ObjectName": "Ship to party",
-                "Action": "Enter text",
-                "ActionDescription": "Enter the ship to party",
-                "Screen": "SAPMV45A:4701",
-                "Screen Name": "Sales Order Items"
-            },
-            {
-                "Step": 9,
-                "Object": "GuiCTextField.VBAP-MATNR",
-                "ObjectName": "Material",
-                "Action": "Enter text",
-                "ActionDescription": "Enter the material",
-                "Screen": "SAPMV45A:4701",
-                "Screen Name": "Sales Order Items"
-            },
-            {
-                "Step": 10,
-                "Object": "GuiCTextField.VBAP-QUANT",
-                "ObjectName": "Quantity",
-                "Action": "Enter text",
-                "ActionDescription": "Enter the quantity",
-                "Screen": "SAPMV45A:4701",
-                "Screen Name": "Sales Order Items"
-            },
-            {
-                "Step": 11,
-                "Object": "GuiButton.btn[0]",
-                "ObjectName": "Press Enter",
-                "Action": "Press Button",
-                "ActionDescription": "Press Enter to proceed",
-                "Screen": "SAPMV45A:4701",
-                "Screen Name": "Sales Order Items"
-            },
-            {
-                "Step": 12,
-                "Object": "GuiTextField.VBAK-WAERK",
-                "ObjectName": "Plant",
-                "Action": "Validate text",
-                "ActionDescription": "Validate that the plant is not empty",
-                "Screen": "SAPMV45A:4701",
-                "Screen Name": "Sales Order Items"
-            },
-            {
-                "Step": 13,
-                "Object": "GuiTextField.VBAK-ZTERM",
-                "ObjectName": "Payment Term",
-                "Action": "Validate text",
-                "ActionDescription": "Validate that the payment term is not empty",
-                "Screen": "SAPMV45A:4701",
-                "Screen Name": "Sales Order Items"
-            },
-            {
-                "Step": 14,
-                "Object": "GuiTextField.VBAK-INCO1",
-                "ObjectName": "Inco Term 1",
-                "Action": "Validate text",
-                "ActionDescription": "Validate that the Inco term 1 is not empty",
-                "Screen": "SAPMV45A:4701",
-                "Screen Name": "Sales Order Items"
-            },
-            {
-                "Step": 15,
-                "Object": "GuiButton.btn[1]",
-                "ObjectName": "Check Incompletion Log",
-                "Action": "Press Button",
-                "ActionDescription": "Check the incompletion log",
-                "Screen": "SAPMV45A:4701",
-                "Screen Name": "Sales Order Items"
-            },
-            {
-                "Step": 16,
-                "Object": "GuiButton.btn[0]",
-                "ObjectName": "Press Enter",
-                "Action": "Press Button",
-                "ActionDescription": "Press Enter if Document complete message is displayed",
-                "Screen": "SAPMV45A:4701",
-                "Screen Name": "Sales Order Items"
-            }
-        ]
-    }
+  {
+    "name": "Create Sales Document",
+    "Application": "S4 Hana Sales and Distribution",
+    "steps": [
+      {
+        "Step": 1,
+        "Object": "GuiOkCodeField.wnd[0]/tbar[0]/okcd",
+        "ObjectName": "okcd",
+        "Action": "Enter transaction code",
+        "ActionDescription": "Enter the transaction code 'VA01' in the OK code field",
+        "Screen": "SAP Main",
+        "Screen Name": "SAP Main"
+      },
+      {
+        "Step": 2,
+        "Object": "GuiCTextField.VBAK-AUART",
+        "ObjectName": "Order Type",
+        "Action": "Enter content into an EditBox",
+        "ActionDescription": "Enter the order type",
+        "Screen": "SAPMV45A:0101",
+        "Screen Name": "Create Sales Order"
+      },
+      {
+        "Step": 3,
+        "Object": "GuiCTextField.VBAK-VKORG",
+        "ObjectName": "Sales Organization",
+        "Action": "Enter content into an EditBox",
+        "ActionDescription": "Enter the Sales organization",
+        "Screen": "SAPMV45A:0101",
+        "Screen Name": "Create Sales Order"
+      },
+      {
+        "Step": 4,
+        "Object": "GuiCTextField.VBAK-VTWEG",
+        "ObjectName": "Distribution Channel",
+        "Action": "Enter content into an EditBox",
+        "ActionDescription": "Enter the Distribution Channel",
+        "Screen": "SAPMV45A:0101",
+        "Screen Name": "Create Sales Order"
+      },
+      {
+        "Step": 5,
+        "Object": "GuiCTextField.VBAK-SPART",
+        "ObjectName": "Division",
+        "Action": "Enter content into an EditBox",
+        "ActionDescription": "Enter the Division",
+        "Screen": "SAPMV45A:0101",
+        "Screen Name": "Create Sales Order"
+      },
+      {
+        "Step": 6,
+        "Object": "GuiButton.btn[0]",
+        "ObjectName": "Press Enter",
+        "Action": "Press Button",
+        "ActionDescription": "Press Enter to proceed to Sales Order Items screen",
+        "Screen": "SAPMV45A:0101",
+        "Screen Name": "Create Sales Order"
+      },
+      {
+        "Step": 7,
+        "Object": "KUAGV-KUNNR",
+        "ObjectName": "Sold to party",
+        "Action": "Enter text",
+        "ActionDescription": "Enter the sold to party",
+        "Screen": "SAPMV45A:4021",
+        "Screen Name": "Sales Order Items"
+      },
+      {
+        "Step": 8,
+        "Object": "GuiCTextField.KUWEV-KUNNR",
+        "ObjectName": "Ship to party",
+        "Action": "Enter text",
+        "ActionDescription": "Enter the ship to party",
+        "Screen": "SAPMV45A:4021",
+        "Screen Name": "Sales Order Items"
+      },
+      {
+        "Step": 9,
+        "Object": "GuiCTextField.VBKD-BSTKD",
+        "ObjectName": "Customer Reference",
+        "Action": "Enter text",
+        "ActionDescription": "Enter the Customer Reference",
+        "Screen": "SAPMV45A:4021",
+        "Screen Name": "Sales Order Items"
+      },
+      {
+        "Step": 10,
+        "Object": "GuiCTextField.MARA-MATNR",
+        "ObjectName": "Material",
+        "Action": "Enter text",
+        "ActionDescription": "Enter the Material",
+        "Screen": "SAPMV45A:4021",
+        "Screen Name": "Sales Order Items"
+      },
+      {
+        "Step": 11,
+        "Object": "GuiCTextField.VBEP-LFIMG",
+        "ObjectName": "Quantity",
+        "Action": "Enter text",
+        "ActionDescription": "Enter the Quantity",
+        "Screen": "SAPMV45A:4021",
+        "Screen Name": "Sales Order Items"
+      },
+      {
+        "Step": 12,
+        "Object": "GuiButton.btn[0]",
+        "ObjectName": "Press Enter",
+        "Action": "Press Button",
+        "ActionDescription": "Press Enter to proceed and populate item details",
+        "Screen": "SAPMV45A:4021",
+        "Screen Name": "Sales Order Items"
+      },
+      {
+        "Step": 13,
+        "Object": "GuiTab.T\\01",
+        "ObjectName": "Sales Tab",
+        "Action": "Click Tab",
+        "ActionDescription": "Click on Sales Tab to navigate to the Sales Item screen",
+        "Screen": "SAPMV45A:4002",
+        "Screen Name": "Sales Item"
+      },
+      {
+        "Step": 14,
+        "Object": "GuiCTextField.VBEP-WERKS",
+        "ObjectName": "Plant",
+        "Action": "Verify field is not empty",
+        "ActionDescription": "Verify Plant is not empty",
+        "Screen": "SAPMV45A:4002",
+        "Screen Name": "Sales Item"
+      },
+      {
+        "Step": 15,
+        "Object": "GuiCTextField.VBEP-ZTERM",
+        "ObjectName": "Payment Term",
+        "Action": "Verify field is not empty",
+        "ActionDescription": "Verify Payment Term is not empty",
+        "Screen": "SAPMV45A:4002",
+        "Screen Name": "Sales Item"
+      },
+      {
+        "Step": 16,
+        "Object": "GuiCTextField.VBEP-INTTP",
+        "ObjectName": "Inco Term 1",
+        "Action": "Verify field is not empty",
+        "ActionDescription": "Verify Inco Term 1 is not empty",
+        "Screen": "SAPMV45A:4002",
+        "Screen Name": "Sales Item"
+      },
+      {
+        "Step": 17,
+        "Object": "GuiButton.btn[5]",
+        "ObjectName": "Complete Document Button",
+        "Action": "Press Button",
+        "ActionDescription": "Press 'Complete Document' button to check incompletion log",
+        "Screen": "SAPMV45A:4001",
+        "Screen Name": "Sales Order: Overview"
+      },
+      {
+        "Step": 18,
+        "Object": "GuiButton.btn[0]",
+        "ObjectName": "Press Enter",
+        "Action": "Press Button",
+        "ActionDescription": "Press Enter if 'Document is complete' message is displayed",
+        "Screen": "SAPMV45A:4003",
+        "Screen Name": "Incompletion Log"
+      }
+    ]
+  }
 ]
