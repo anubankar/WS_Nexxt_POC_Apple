@@ -16,6 +16,7 @@ from FindReferenceProcess import findProcessFromGraph1
 from CreateMainProcess import create_main_process
 from neo4j import GraphDatabase
 import sqlite3
+from Read_Map_File import process_map_files
 #from FindScreenObjects import fetch_screen_object_mapping
 
 # Load env
@@ -127,125 +128,6 @@ def define_prompt():
 
 sysprompt = ""#You are expert in Worksoft Certify, SAP and creating automation test cases. Convert descriptions into structured JSON steps."
 
-#screen object mapping from the JSON file 
-def fetch_screen_object_mapping():
-    # Load the JSON file for the specified SAP TCode
-    json_file_path = "VA01_Screens.json"
-    try:
-        with open(json_file_path, "r") as json_file:
-            json_data = json.load(json_file)
-            #print(f"Loaded JSON data for {sap_screen}: {json_data}")
-    except FileNotFoundError:
-        print(f"Error: The JSON file {json_file_path} does not exist.")
-        json_data = None
-    
-    #print("Map File JSON: ", str(json_data))
-    return str(json_data)
-
-def fetch_screen_object_mappingNew(sap_screen, description, applicationVersionID):
-    sap_program = ""
-    # Find SAP Screen Name for TCode
-    # Initialize OpenAI client
-    client = openai.OpenAI()
-    
-    # Create prompt to get SAP program name
-    prompt = f"""Given the SAP transaction code {sap_screen}, return only the SAP program name.
-    For example, for VA01 the program name is SAPMV45A.
-    Return only the program name without any additional text or explanation."""
-    
-    # Call OpenAI API
-    response = client.chat.completions.create(
-        model="google/gemini-2.5-flash-preview-05-20",
-       messages=[
-            {"role": "system", "content": "You are an expert in SAP transaction codes and their corresponding program names."},
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0.1,
-        max_tokens=50
-    )
-
-    # Extract and clean the program name
-    sap_program = response.choices[0].message.content.strip()
-    if not sap_program:
-        logger.error(f"Failed to get SAP program name for transaction code {sap_screen}")
-        return None
-
-    # Create prompt to get SAP screen and field names
-    prompt = f"""For SAP Program {sap_program} for SAP Transaction Code {sap_screen}, 
-    find out SAP screen names used for this TCode that would be used to complete steps specified in description. 
-    provide name and technical sap screen names for e.g. SAPMV45A:0101.
-    Important: Return SAP screen names as a comma separated string. Dont return any additional text
-    """
-
-    # Call OpenAI API
-    response = client.chat.completions.create(
-        model="google/gemini-2.5-flash-preview-05-20",
-        messages=[
-            {"role": "system", "content": "You are an expert in SAP transaction codes, screens and field names."},
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0.1,
-        max_tokens=500
-    )
-
-    screen_names = response.choices[0].message.content.strip()
-    # Split the response into individual screen names and clean them
-    screen_names_list = [f"'{name.strip()}'" for name in screen_names.split(',')]
-    
-    # Join the cleaned screen names back into a comma-separated string
-    screen_names_str = ','.join(screen_names_list)
-    
-    print(sap_screen, " => ","Screen Found: ", screen_names_str)
-
-    # Connect to SQLite database
-    conn = sqlite3.connect('worksoft.db')
-    cursor = conn.cursor()
-    
-    # Run Query
-    query = f"""
-SELECT c.PhysicalName as Component, p.ObjectID as ParentID, p.PhysicalName as Screen,
-      o.ObjectID, o.PhysicalName
-FROM
-( SELECT *
-    FROM Object 
-    WHERE ParentID IN (
-        SELECT DISTINCT ObjectID 
-        FROM Object 
-        WHERE PhysicalName in ({screen_names_str}) 
-          AND ApplicationVersionID = {applicationVersionID} )
-) as o,
-( SELECT DISTINCT ObjectID, PhysicalName 
-    FROM Object 
-    WHERE PhysicalName in ({screen_names_str})
-    AND ApplicationVersionID = {applicationVersionID}
-) as p, Component c
-WHERE o.ParentID = p.ObjectID and o.ComponentID = c.ComponentID
-ORDER BY  p.ObjectID""";
-
-    #print(query)
-    cursor.execute(query)
-    
-    # Execute the query and fetch all results
-    results = cursor.fetchall()
-
-    # Convert results into structured format
-    screen_objects = []
-    for row in results:
-        component, parent_id, screen, object_id, physical_name = row
-        screen_object = {
-            "Component": component,
-            "Object Name": physical_name,
-            "Screen": screen,
-            "Field_Name": physical_name.split('.')[-1] if '.' in physical_name else physical_name
-        }
-        screen_objects.append(screen_object)
-    
-    # Convert to JSON string
-    json_output = json.dumps(screen_objects, indent=4)
-    print(json_output)
-    return json_output
-    #return ""  
-
 # Call LLM
 def callLlmForJson(sap_screen, description, expected_result, base_prompt, reference_process1, object_prompt):
     # Prompt    
@@ -260,11 +142,12 @@ def callLlmForJson(sap_screen, description, expected_result, base_prompt, refere
     testprompt = f"""\n
     
     Important Instructions:
-- First Step should be entering SAP TCode, for eg. ("VA01") in ok code field on SAP Main Screen
-- Find SAP Program name for the SAP TCode, for e.g. VA01 program name is SAPMV45A and first screen is SAPMV45A:0101
-- Then get the objects on SAPMV45A:0101 screen from screen mapping provided and add them in JSON
-- Then move on to next screen and add objects for next screen in JSON. Before moving to next screen, add navigation step by pressing enter or click on a tab
-- Make sure to add objects specified in description and on screen they exist as per the mapping 
+- First Step should be entering SAP TCode, for eg. ("VA01") in ok code field on SAP Main Screen.
+- Find SAP Program name for the SAP TCode, for e.g. VA01 program name is SAPMV45A and first screen is SAPMV45A:0101.
+- Then get the objects on SAPMV45A:0101 screen from screen mapping provided and add them in JSON.
+- add navigation step by pressing enter or click on a tab during screen tansition.
+- Then move on to next screen and add objects for next screen in JSON. Before moving to next screen.
+- Make sure to add objects specified in description and on screen they exist as per the mapping.
     
     Requirement for Certify Automation: 
     SAP TCode: {sap_screen} and Step Description: {description}"""            
@@ -310,7 +193,9 @@ def Create_JSON(file_path, stats_df):
         # Fetch screen object mapping from Neo4j
         #screen_json = fetch_screen_object_mapping()
         ApplicationVersionID = 34;
-        screen_json = fetch_screen_object_mappingNew(sap_screen, description, ApplicationVersionID)       
+        #screen_json = fetch_screen_object_mappingNew(sap_screen, description, ApplicationVersionID)
+        screen_json = str (process_map_files())       
+        print ("screen json from map file",screen_json)
         objectprompt ="\nSAP Object and Screen mapping  is as follows: "+ screen_json
         objectprompt += "\nStrictly follow Screen corresponding to the object when you are generate step. Please think step by step and only add step when corresponding object belong to the screen as per mapping json"
         if objectprompt is None:
@@ -333,6 +218,26 @@ def Create_JSON(file_path, stats_df):
         #     json_output = callLlmForJson(sap_screen, description, expected_result, base_prompt, reference_process1, objectprompt)
             
         json_output = callLlmForJson(sap_screen, description, expected_result, base_prompt, "", objectprompt)
+        
+        sysprompt= """you are expert figuring out the mistakes in the json fromat"""
+        usrprompt = f"""This is the generated Json format and the map files details.
+        can you check if there any mismatch of screen to objects in the json refering to map file details is yes then correct it and return the json only\n
+
+          this is the generated json :
+          {json_output}\n
+          this is the map file details :
+          {screen_json}
+         
+          """
+        response = client.chat.completions.create(
+        model="google/gemini-2.5-flash-preview-05-20",
+        messages=[
+            {"role": "system", "content": sysprompt},
+            {"role": "user", "content": usrprompt}
+        ]
+    )
+        json_output = response.choices[0].message.content
+        json_output = json_output.replace("```json", "").replace("```", "").strip()
 
         # Save JSON output to a file
         # Create the output directory if it doesn't exist
@@ -443,7 +348,7 @@ if __name__ == "__main__":
                 df = pd.concat([new_df, df], ignore_index=True)
         else:
             logger.warning(f"Process JSON as No ProcessID found for Step Name: {step_name}, SAP Screen: {sap_screen}")
-            #df, ProcessList = process_json_file(json_full_path, step_name, sap_screen, logger, conn, cursor, df, ProcessList)
+            df, ProcessList = process_json_file(json_full_path, step_name, sap_screen, logger, conn, cursor, df, ProcessList)
 
     logger.info(f"Processing Finished => {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
