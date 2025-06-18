@@ -5,6 +5,7 @@ from neo4j import GraphDatabase
 from datetime import datetime
 from dotenv import load_dotenv
 import logging
+from FindReferenceProcess import findProcessFromGraph1
 
 # setup Logging
 logging.basicConfig(level=logging.INFO)
@@ -130,7 +131,7 @@ def create_excel_from_query():
     try:
         driver = GraphDatabase.driver(url, auth=(username, password))
         with driver.session() as session:
-            # Execute the query
+            # Execute the query to get test cases
             result = session.run("""
                 MATCH (r:Test_cases)
                 WITH r.Description AS descList, COLLECT(r) AS records
@@ -140,14 +141,24 @@ def create_excel_from_query():
                     records[0].Transaction AS TCode
             """)
             
-            # Convert results to a list of dictionaries
-            #data = [record for record in result]
-            data = [{
-                "Step Name": f"Step {i+1}",
-                "SAP Screen": record["TCode"],
-                "Description": record["Description"],
-                "Expected Result": ""  # Leave blank
-            } for i, record in enumerate(result)]
+            # Convert results to a list of dictionaries and find reference processes
+            data = []
+            for i, record in enumerate(result):
+                # Find reference process using findProcessFromGraph1
+                reference_process = findProcessFromGraph1(
+                    sap_screen=record["TCode"],
+                    description=record["Description"],
+                    logger1=logger
+                )
+                
+                data.append({
+                    "Step Name": f"Step {i+1}",
+                    "SAP Screen": record["TCode"],
+                    "Description": record["Description"],
+                    "Reference Process ID": reference_process["ProcessID"] if reference_process else "",
+                    "Similarity Score": reference_process["similarity"] if reference_process else "",
+                    "Expected Result": ""  # Leave blank
+                })
 
             # Create DataFrame
             df = pd.DataFrame(data)
@@ -175,17 +186,18 @@ def create_excel_from_query():
 def main():
     batch_folder = 'Batch_Files'  # Adjust the path as necessary
 
-    # Walk through all subdirectories and files in the Batchfiles folder
-    for root, dirs, files in os.walk(batch_folder):
-        for filename in files:
-            file_path = os.path.join(root, filename)
-            
-            if filename.endswith(('.xlsx', '.xls')):
-                excel_preprocessing(file_path)
-            elif filename.endswith('.docx'):
-                doc_preprocessing(file_path)
     
-    # Create Excel file from Neo4j query
+    # # Walk through all subdirectories and files in the Batchfiles folder
+    # for root, dirs, files in os.walk(batch_folder):
+    #     for filename in files:
+    #         file_path = os.path.join(root, filename)
+            
+    #         if filename.endswith(('.xlsx', '.xls')):
+    #             excel_preprocessing(file_path)
+    #         elif filename.endswith('.docx'):
+    #             doc_preprocessing(file_path)
+    
+    # # Create Excel file from Neo4j query
     create_excel_from_query()
 
 if __name__ == "__main__":

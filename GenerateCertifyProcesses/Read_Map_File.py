@@ -97,11 +97,12 @@ def read_map_file(file_path):
     df = pd.DataFrame(data, columns=["Sr No", "Object_Class", "Parent", "Field_Name"])  # Updated column name
     return df
 
-def process_map_files(map_files_dir=None):
+def process_map_files(sap_screen, map_files_dir=None):
     """
-    Process all map files in the specified directory and return a dictionary of lists.
+    Process map files in the specified directory that match the SAP screen and return a dictionary of lists.
     
     Args:
+        sap_screen (str): The SAP screen to search for in map files
         map_files_dir (str, optional): Path to directory containing map files. 
                                      If None, uses default 'map_files' directory.
     
@@ -113,11 +114,11 @@ def process_map_files(map_files_dir=None):
     
     os.makedirs(map_files_dir, exist_ok=True)
     
-    # Get all map files from the directory
-    map_files = [f for f in os.listdir(map_files_dir) if f.endswith('.map')]
+    # Get all map files from the directory that contain the SAP screen
+    map_files = [f for f in os.listdir(map_files_dir) if f.endswith('.map') and sap_screen in f]
     
     if not map_files:
-        print(f"No .map files found in {map_files_dir}")
+        print(f"No .map files found for SAP screen {sap_screen} in {map_files_dir}")
         return {}
     
     # Dictionary to store lists
@@ -189,12 +190,15 @@ def save_data_to_csv(data_lists, output_dir=None):
 # Main Function
 def main():
     # Process all map files and get data lists
-    data_lists = process_map_files()
-    print("this are the all screens with map file details\n", data_lists)
+    data_lists = process_map_files(sap_screen)
     
-    # Save data to CSV files
     if data_lists:
+        print(f"Found {len(data_lists)} map files for SAP screen {sap_screen}")
+        print("Map file details:", data_lists)
+        # Save data to CSV files
         save_data_to_csv(data_lists)
+    else:
+        print(f"No mapping files found for SAP screen {sap_screen}")
 
 if __name__ == "__main__":
     main()

@@ -194,14 +194,19 @@ def Create_JSON(file_path, stats_df):
         #screen_json = fetch_screen_object_mapping()
         ApplicationVersionID = 34;
         #screen_json = fetch_screen_object_mappingNew(sap_screen, description, ApplicationVersionID)
-        screen_json = str (process_map_files())       
-        print ("screen json from map file",screen_json)
-        objectprompt ="\nSAP Object and Screen mapping  is as follows: "+ screen_json
-        objectprompt += "\nStrictly follow Screen corresponding to the object when you are generate step. Please think step by step and only add step when corresponding object belong to the screen as per mapping json"
-        if objectprompt is None:
-            print(f"No mapping found for TCode: {sap_screen}")
-            continue  # Skip this iteration if no mapping is found
+        screen_json = str (process_map_files(sap_screen))   
+        if(screen_json):
 
+            print ("screen json from map file",screen_json)
+            objectprompt ="\nSAP Object and Screen mapping  is as follows: "+ screen_json
+            objectprompt += "\nStrictly follow Screen corresponding to the object when you are generate step. Please think step by step and only add step when corresponding object belong to the screen as per mapping json"
+        else:
+            objectprompt = "No screen object mapping continue without it to generate json"
+        # if objectprompt is None:
+        #     print(f"No mapping found for TCode: {sap_screen}")
+        #     continue  # Skip this iteration if no mapping is found
+
+        # Below approach is not working hence commented ****
         # # Find Similar Process by Calling Neo4J Vector Search Query
         # reference_pr1 = findProcessFromGraph1(sap_screen,description, logger)
         # reference_process1=f""" Reference Process_1: {reference_pr1}"""
@@ -225,8 +230,10 @@ def Create_JSON(file_path, stats_df):
 
           this is the generated json :
           {json_output}\n
-          this is the map file details :
-          {screen_json}
+          this is the map file details if it is empty still process with it based on your knowledge :
+          {screen_json}\n
+
+         **IMP : Only return Json do not add other text into it 
          
           """
         response = client.chat.completions.create(
@@ -290,7 +297,7 @@ if __name__ == "__main__":
     # Excel File path
     logger.info(f"Create JSON Files => {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
-    excel_file_path = "TestCases_Input\\Standard Export Sales Order Flow_First1.xlsx"  # Update with actual file path
+    excel_file_path = "TestCases_Input\\Standard Export Sales Order Flow_AllRows.xlsx"  # Update with actual file path
     df = Create_JSON(excel_file_path, df)
 
     # Process the generated JSON => Process_JSON.py
@@ -348,7 +355,7 @@ if __name__ == "__main__":
                 df = pd.concat([new_df, df], ignore_index=True)
         else:
             logger.warning(f"Process JSON as No ProcessID found for Step Name: {step_name}, SAP Screen: {sap_screen}")
-            df, ProcessList = process_json_file(json_full_path, step_name, sap_screen, logger, conn, cursor, df, ProcessList)
+            #df, ProcessList = process_json_file(json_full_path, step_name, sap_screen, logger, conn, cursor, df, ProcessList)
 
     logger.info(f"Processing Finished => {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
