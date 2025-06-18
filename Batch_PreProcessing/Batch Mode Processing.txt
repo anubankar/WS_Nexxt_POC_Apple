@@ -37,12 +37,15 @@ VA01 => Total Variants => 50
 		Unique Variants => 5
 		
 4. Now collect all these unique Variants, create a excel from it in the format of Standard Export Sales Order Flow_AllRows.xlsx.
-Use it in human in the loop. This will create Processes for all unique variants
+Use it in human in the loop. This will create Processes for all unique variants.
 
-5. Now when we batch process, we will already have Reference Processes ready
+5. Also we find the Reference process if there for that unique variants and, 
+add it excel document with ProcessID and Similarity score 
+
+6. Now when we batch process, we will already have Reference Processes ready
 So accuracy will improve as Step generation is not needed for most of the scenarios
 
-6. Create a simple excel report, showing:
+7. Create a simple excel report, showing:
 Total Documents,
 Total Sections per TCode / Fiori App Number,
 Unique Variants per TCode / Fiori App Number,
@@ -53,7 +56,7 @@ Total Documents		TCode	Variant_ID 	Unique_Variant_Or_Not	ProcessID
 
 *ProcessID can be filled even if its not unique, based on ProcessID for Unique Variant
 
-7. Neo4J should get updated after Certify is batch loaded OR user changes any Processes directly in Certify
+8. Neo4J should get updated after Certify is batch loaded OR user changes any Processes directly in Certify
 
 Open Question: 
 1. Will the variant have impact based on the context of the document? for e.g. 2 documents has same line Create Sales Order but the expected steps in them are different and are based on document context. Decide how we will handle this?
